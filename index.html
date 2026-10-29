@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Clínica de Alto Padrão</title>
+<meta name="description" content="O produto Clínica de Alto Padrão, do Dr. Pedro Abrahão: narrativa, método, funil VSL, escada de ofertas e abordagem comercial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Manrope:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<style>
+:root{
+  --navy:#081429; --navy-2:#0c1b36; --navy-3:#122546; --line:rgba(212,180,118,.18); --line-2:rgba(255,255,255,.08);
+  --gold:#d4b476; --gold-2:#ead3a0; --gold-deep:#a8864a;
+  --ivory:#f6f2ea; --ivory-2:#ece5d7; --paper:#fbf9f4;
+  --text:#e9e6df; --muted:#9aa3b5; --muted-dark:#5d6577; --ink:#0d1626;
+  --serif:"Fraunces", Georgia, serif;
+  --sans:"Manrope", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, monospace;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--navy);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--navy);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+::selection{background:var(--gold);color:var(--navy)}
+a{color:inherit}
+
+body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:100;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 8s steps(10) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}}
+
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);z-index:90;background:linear-gradient(90deg,var(--gold-deep),var(--gold-2),var(--gold))}
+.glow{position:fixed;width:560px;height:560px;border-radius:50%;pointer-events:none;z-index:1;left:0;top:0;background:radial-gradient(circle,rgba(212,180,118,.08),transparent 65%);transform:translate(-50%,-50%);opacity:0;transition:opacity .4s}
+@media (hover:hover){.glow{opacity:1}}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px clamp(16px,5vw,64px);transition:background .5s var(--ease),padding .5s var(--ease)}
+.nav.solid{background:rgba(8,20,41,.74);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px);padding-top:13px;padding-bottom:13px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mono-mark{width:38px;height:38px;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);color:var(--gold);font-size:16px;letter-spacing:.04em}
+.brand span{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{font-size:12.5px;color:var(--muted);text-decoration:none;letter-spacing:.04em;transition:color .3s}
+.nav-links a:hover{color:var(--gold-2)}
+.nav-cta{font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);text-decoration:none;border:1px solid rgba(212,180,118,.4);padding:10px 18px;border-radius:999px;transition:all .4s var(--ease);white-space:nowrap}
+.nav-cta:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+@media (max-width:1020px){.nav-links{display:none}}
+@media (max-width:480px){.brand span{display:none}}
+
+/* layout */
+section{position:relative;z-index:2}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(16px,5vw,64px)}
+.pad{padding:clamp(96px,13vw,160px) 0}
+.light{background:var(--ivory);color:var(--ink)}
+.paper{background:var(--paper);color:var(--ink)}
+.deep{background:var(--navy-2)}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.light .eyebrow,.paper .eyebrow{color:var(--gold-deep)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:300;letter-spacing:-.015em;line-height:1.06}
+h2{font-size:clamp(38px,5.6vw,72px);margin:22px 0 26px}
+h2 em,h1 em,h3 em{font-style:italic;color:var(--gold)}
+.light h2 em,.paper h2 em,.light h3 em,.paper h3 em{color:var(--gold-deep)}
+.lead{font-size:clamp(18px,1.6vw,21px);color:var(--muted);max-width:720px;line-height:1.6}
+.light .lead,.paper .lead{color:var(--muted-dark)}
+.head{max-width:900px;margin-bottom:clamp(48px,7vw,80px)}
+.note{font-size:14.5px;color:var(--muted);margin-top:28px;max-width:760px}
+.light .note,.paper .note{color:var(--muted-dark)}
+.note b{color:var(--gold-2);font-weight:600}
+.light .note b,.paper .note b{color:var(--gold-deep)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);filter:blur(6px);transition:opacity 1.1s var(--ease-out),transform 1.1s var(--ease-out),filter 1.1s var(--ease-out);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;filter:none;transition:none}body::after{animation:none}}
+
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:140px 0 56px;overflow:hidden;background:radial-gradient(120% 90% at 85% 10%,#16305a 0%,var(--navy) 55%)}
+.hero-art{position:absolute;right:-12vw;top:50%;width:min(78vw,900px);aspect-ratio:1;transform:translateY(-55%);pointer-events:none;opacity:.9}
+.hero-art .ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(212,180,118,.16)}
+.hero-art .ring:nth-child(2){inset:9%;border-color:rgba(212,180,118,.12);animation:spin 80s linear infinite;border-style:dashed}
+.hero-art .ring:nth-child(3){inset:20%;border-color:rgba(212,180,118,.2)}
+.hero-art .ring:nth-child(4){inset:32%;border-color:rgba(212,180,118,.1);animation:spin 120s linear infinite reverse;border-style:dashed}
+.hero-art .orb{position:absolute;inset:30%;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(234,211,160,.45),rgba(212,180,118,.08) 45%,transparent 70%);filter:blur(10px);animation:breathe 9s ease-in-out infinite}
+.hero-art .dot{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 18px var(--gold);top:9%;left:50%}
+.hero-art .orbit{position:absolute;inset:9%;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.08);opacity:1}}
+.hero .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+.hero h1{font-size:clamp(56px,10.5vw,150px);line-height:.94;letter-spacing:-.03em;color:#fff}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln>span{display:inline-block;transform:translateY(105%);transition:transform 1.4s var(--ease-out)}
+.hero.ready h1 .ln>span{transform:none}
+.hero h1 .ln:nth-child(2)>span{transition-delay:.12s}
+.hero .thesis{margin-top:34px;max-width:620px;font-size:clamp(18px,1.7vw,22px);color:#c9cfdb;line-height:1.55}
+.hero .thesis b{color:#fff;font-weight:500}
+.ladder{margin-top:clamp(56px,8vw,96px);display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.ladder div{padding:22px 18px 0 0}
+.ladder strong{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.6vw,34px);color:var(--gold);letter-spacing:-.01em}
+.ladder span{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:700px){.ladder{grid-template-columns:repeat(2,1fr);row-gap:8px}.hero-art{right:-40vw;top:32%;width:120vw;opacity:.55}}
+.scroll-cue{position:absolute;left:50%;bottom:18px;width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.4s var(--ease) infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* intro letter */
+.letter{display:grid;grid-template-columns:1fr 1.35fr;gap:clamp(40px,7vw,110px);align-items:start}
+.letter .big{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.4vw,58px);line-height:1.08;letter-spacing:-.02em}
+.letter .big em{color:var(--gold-deep)}
+.letter p{font-size:18px;color:#3a4254;margin-bottom:20px}
+.letter p:first-child::first-letter{font-family:var(--serif);float:left;font-size:72px;line-height:.85;padding:6px 12px 0 0;color:var(--gold-deep)}
+.sign{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold-deep);margin-top:8px}
+@media (max-width:860px){.letter{grid-template-columns:1fr}}
+
+/* narrative */
+.tabs{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:5px;margin-bottom:56px;background:rgba(255,255,255,.02);max-width:100%;flex-wrap:wrap}
+.tab{border:0;background:none;color:var(--muted);font:600 13px var(--sans);letter-spacing:.06em;padding:12px 22px;border-radius:999px;cursor:pointer;transition:all .45s var(--ease)}
+.tab.on{background:var(--gold);color:var(--navy)}
+.story{display:none;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,96px)}
+.story.on{display:grid}
+@media (max-width:860px){.story.on{grid-template-columns:1fr}.story .who{position:static}}
+.story .who{position:sticky;top:120px;align-self:start}
+.story .who h3{font-size:clamp(34px,4vw,52px);margin:18px 0 18px}
+.story .who p{color:var(--muted);font-size:16.5px}
+.story .who .tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--gold);border:1px solid var(--line);padding:6px 12px;border-radius:999px;text-transform:uppercase}
+.beats{list-style:none;border-left:1px solid var(--line);padding-left:clamp(22px,3vw,40px)}
+.beat{position:relative;padding:0 0 36px;opacity:0;transform:translateX(16px);transition:all .9s var(--ease-out)}
+.story.on .beat{opacity:1;transform:none}
+.beat::before{content:"";position:absolute;left:calc(-1 * clamp(22px,3vw,40px) - 4px);top:12px;width:7px;height:7px;border-radius:50%;background:var(--navy);border:1px solid var(--gold)}
+.beat time{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;color:var(--gold);display:block;margin-bottom:6px}
+.beat p{font-family:var(--serif);font-weight:300;font-size:clamp(21px,2vw,27px);line-height:1.35;color:#eef0f4}
+.beat.turn p{color:var(--gold-2);font-style:italic}
+.converge{margin-top:clamp(64px,9vw,110px);padding:clamp(32px,5vw,56px);border:1px solid var(--line);background:linear-gradient(135deg,rgba(212,180,118,.08),transparent 60%);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.converge h3{font-size:clamp(28px,3.2vw,42px)}
+.converge p{color:#c9cfdb}
+@media (max-width:860px){.converge{grid-template-columns:1fr}}
+
+/* errors */
+.errors{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(13,22,38,.12);border:1px solid rgba(13,22,38,.12)}
+.err{background:var(--ivory);padding:clamp(28px,3.5vw,44px);transition:background .5s var(--ease)}
+.err:hover{background:#fff}
+.err .n{font-family:var(--serif);font-size:56px;color:var(--gold-deep);font-weight:300;line-height:1}
+.err h4{font-size:26px;margin:22px 0 12px;color:var(--ink)}
+.err p{font-size:15.5px;color:var(--muted-dark)}
+@media (max-width:860px){.errors{grid-template-columns:1fr}}
+.quote-band{margin-top:clamp(56px,8vw,96px);text-align:center}
+.quote-band blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(30px,4.4vw,60px);line-height:1.12;letter-spacing:-.02em;max-width:980px;margin:0 auto}
+.quote-band blockquote em{color:var(--gold-deep)}
+.quote-band cite{display:block;margin-top:22px;font-style:normal;font-family:var(--mono);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted-dark)}
+
+/* pillars stack */
+.stack{display:flex;flex-direction:column;gap:22px}
+.pillar{position:sticky;top:calc(96px + var(--i) * 16px);display:grid;grid-template-columns:120px 1fr 1.1fr;gap:clamp(20px,4vw,56px);align-items:start;padding:clamp(30px,4vw,48px);border:1px solid var(--line);background:linear-gradient(160deg,var(--navy-3),var(--navy-2) 70%);box-shadow:0 -20px 60px rgba(0,0,0,.35);min-height:260px}
+.pillar .rn{font-family:var(--serif);font-size:72px;font-weight:300;color:var(--gold);line-height:.9}
+.pillar h3{font-size:clamp(28px,3vw,40px);margin-bottom:12px}
+.pillar .why{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--gold-2);line-height:1.45}
+.pillar ul{list-style:none;display:grid;gap:10px}
+.pillar li{font-size:15.5px;color:#c9cfdb;padding-left:20px;position:relative}
+.pillar li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:1px;background:var(--gold)}
+@media (max-width:860px){.pillar{grid-template-columns:1fr;top:calc(76px + var(--i) * 10px);gap:14px}.pillar .rn{font-size:52px}}
+
+/* value ladder */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:end}
+.step{border:1px solid rgba(13,22,38,.14);background:#fff;padding:24px 20px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .6s var(--ease-out),box-shadow .6s var(--ease-out)}
+.step:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(13,22,38,.12)}
+.step:nth-child(1){min-height:250px}.step:nth-child(2){min-height:290px}.step:nth-child(3){min-height:340px}.step:nth-child(4){min-height:400px;background:var(--navy);color:var(--text);border-color:var(--navy)}.step:nth-child(5){min-height:460px;background:linear-gradient(170deg,#e3c68c,#c09a58);border-color:#c09a58}
+.step .lvl{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep)}
+.step:nth-child(4) .lvl{color:var(--gold)}.step:nth-child(5) .lvl{color:var(--navy)}
+.step h4{font-size:24px;margin:14px 0 10px}
+.step p{font-size:14px;color:var(--muted-dark);line-height:1.55}
+.step:nth-child(4) p{color:#b7bfcd}.step:nth-child(5) p{color:#2a2f3a}
+.step .price{font-family:var(--serif);font-size:clamp(24px,2.2vw,34px);white-space:nowrap;font-weight:300;margin-top:20px;letter-spacing:-.01em}
+.step .where{font-size:11.5px;letter-spacing:.08em;margin-top:8px;color:var(--muted-dark)}
+.step:nth-child(4) .where{color:var(--gold-2)}.step:nth-child(5) .where{color:var(--navy)}
+@media (max-width:980px){.steps{grid-template-columns:1fr 1fr}.step{min-height:0!important}.step:nth-child(5){grid-column:1/-1}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* funnel flow */
+.flow{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+.flow svg{position:absolute;left:0;right:0;top:34px;width:100%;height:4px;overflow:visible}
+.flow .node{position:relative;padding-right:18px}
+.flow .dot{width:68px;height:68px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:24px;color:var(--gold);background:var(--navy);position:relative;z-index:2;transition:background .6s,color .6s}
+.flow .node.lit .dot{background:var(--gold);color:var(--navy)}
+.flow h4{font-size:22px;margin:22px 0 8px}
+.flow p{font-size:14px;color:var(--muted)}
+@media (max-width:980px){.flow{grid-template-columns:1fr 1fr;row-gap:44px}.flow svg{display:none}}
+@media (max-width:520px){.flow{grid-template-columns:1fr}}
+.table{margin-top:72px;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:220px 1fr;gap:28px;padding:20px 0;border-bottom:1px solid var(--line-2)}
+.row b{font-weight:600;color:#fff;font-size:15.5px}
+.row span{color:#c3c9d6;font-size:15.5px}
+code{font-family:var(--mono);font-size:.86em;background:rgba(212,180,118,.12);color:var(--gold-2);padding:2px 7px;border-radius:4px}
+.light code,.paper code{background:rgba(168,134,74,.13);color:#7a5e2c}
+@media (max-width:640px){.row{grid-template-columns:1fr;gap:4px}}
+
+/* vsl */
+.minutebar{position:relative;display:flex;height:58px;border:1px solid rgba(13,22,38,.16);margin-bottom:16px;background:#fff}
+.minutebar div{border-right:1px solid rgba(13,22,38,.1);display:flex;align-items:flex-end;padding:8px;font-family:var(--mono);font-size:10px;color:var(--muted-dark);overflow:hidden;white-space:nowrap;transition:background .4s}
+.minutebar div:hover,.minutebar div.hl{background:rgba(212,180,118,.22)}
+.minutebar .pitch{background:rgba(212,180,118,.16)}
+.minutebar .mark{position:absolute;top:-30px;left:calc(660/1020*100%);transform:translateX(-50%);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--gold-deep);white-space:nowrap}
+.minutebar .mark::after{content:"";position:absolute;left:50%;top:22px;width:1px;height:66px;background:var(--gold-deep)}
+.ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--muted-dark);margin-bottom:56px}
+.blocks{display:grid;gap:14px}
+.blk{border:1px solid rgba(13,22,38,.12);background:#fff;transition:border-color .4s}
+.blk summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:60px 1fr auto 28px;gap:18px;align-items:center;padding:22px clamp(18px,3vw,30px)}
+.blk summary::-webkit-details-marker{display:none}
+.blk .bn{font-family:var(--serif);font-size:30px;color:var(--gold-deep);font-weight:300}
+.blk h4{font-size:24px;color:var(--ink)}
+.blk h4 small{display:block;font-family:var(--sans);font-size:13.5px;color:var(--muted-dark);letter-spacing:0;margin-top:4px;line-height:1.3}
+.blk .t{font-family:var(--mono);font-size:12px;color:var(--gold-deep);white-space:nowrap}
+.blk .pm{width:28px;height:28px;border-radius:50%;border:1px solid rgba(13,22,38,.2);position:relative;transition:transform .5s var(--ease)}
+.blk .pm::before,.blk .pm::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1px;background:var(--ink);transform:translate(-50%,-50%)}
+.blk .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .5s var(--ease)}
+.blk[open]{border-color:var(--gold-deep)}
+.blk[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.blk .body{padding:0 clamp(18px,3vw,30px) 28px calc(clamp(18px,3vw,30px) + 78px)}
+.script{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(19px,1.7vw,22px);line-height:1.55;color:#202838;border-left:2px solid var(--gold);padding:4px 0 4px 22px;margin-bottom:16px}
+.blk .body p{font-size:15.5px;color:var(--muted-dark);margin-top:10px}
+.blk .body p b{color:var(--ink)}
+@media (max-width:640px){.blk summary{grid-template-columns:40px 1fr 26px}.blk .t{display:none}.blk .body{padding-left:clamp(18px,3vw,30px)}.minutebar div span{display:none}}
+
+/* hooks */
+.hooks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hook{border:1px solid var(--line);padding:30px 28px;background:rgba(255,255,255,.015);transition:border-color .5s,transform .6s var(--ease-out),background .5s;display:flex;flex-direction:column;gap:18px}
+.hook:hover{border-color:var(--gold);transform:translateY(-4px);background:rgba(212,180,118,.05)}
+.hook .ang{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.hook q{font-family:var(--serif);font-weight:300;font-size:24px;line-height:1.25;color:#fff;quotes:"“" "”"}
+.hook p{font-size:14px;color:var(--muted);margin-top:auto;border-top:1px solid var(--line-2);padding-top:14px}
+@media (max-width:900px){.hooks{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.hooks{grid-template-columns:1fr}}
+
+/* checkout mock */
+.checkout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start}
+.co{background:#fff;border:1px solid rgba(13,22,38,.12);box-shadow:0 40px 80px rgba(13,22,38,.1);padding:clamp(22px,3vw,34px)}
+.co-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(13,22,38,.1);padding-bottom:16px;margin-bottom:18px;gap:10px}
+.co-head b{font-family:var(--serif);font-weight:400;font-size:21px}
+.co-head span{font-family:var(--serif);font-size:21px;color:var(--gold-deep);white-space:nowrap}
+.bump{display:grid;grid-template-columns:24px 1fr auto;gap:14px;border:1.5px dashed rgba(168,134,74,.55);background:#fffaf0;padding:16px;margin-bottom:12px;cursor:pointer;transition:background .3s,border-color .3s}
+.bump.on{background:#fdf1d8;border-style:solid;border-color:var(--gold-deep)}
+.bump .box{width:22px;height:22px;border:1.5px solid var(--gold-deep);border-radius:4px;display:grid;place-items:center;margin-top:2px;transition:background .3s}
+.bump.on .box{background:var(--gold-deep)}
+.bump.on .box::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.bump b{font-size:14.5px;color:#7a5e2c;display:block}
+.bump small{display:block;font-size:13px;color:var(--muted-dark);margin-top:4px;line-height:1.45}
+.bump .p{font-family:var(--serif);font-size:19px;color:var(--ink);white-space:nowrap}
+.co-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:18px;padding-top:16px;border-top:1px solid rgba(13,22,38,.1)}
+.co-total span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-dark)}
+.co-total b{font-family:var(--serif);font-weight:400;font-size:34px;color:var(--ink)}
+.co-why h3{font-size:clamp(28px,3vw,38px);margin-bottom:18px}
+.co-why p{color:var(--muted-dark);margin-bottom:16px}
+.upsell{margin-top:clamp(72px,10vw,120px);display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(32px,6vw,80px);align-items:center}
+.player{aspect-ratio:16/9;background:radial-gradient(circle at 30% 30%,#1b3563,var(--navy));position:relative;display:grid;place-items:center;overflow:hidden}
+.player::after{content:"";position:absolute;inset:14px;border:1px solid rgba(212,180,118,.25)}
+.play{width:78px;height:78px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;animation:pulse 2.6s var(--ease) infinite}
+.play::after{content:"";border-left:18px solid var(--gold);border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(212,180,118,.45)}100%{box-shadow:0 0 0 28px rgba(212,180,118,0)}}
+.player .cap{position:absolute;bottom:26px;left:30px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--gold-2);text-transform:uppercase}
+@media (max-width:860px){.checkout,.upsell{grid-template-columns:1fr}}
+
+/* simulator */
+.sim{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.ctrls{display:grid;gap:22px}
+.ctrl label{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:#c9cfdb;margin-bottom:10px}
+.ctrl label output{font-family:var(--mono);color:var(--gold-2);font-size:13.5px;white-space:nowrap}
+.ctrl input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:2px;background:linear-gradient(90deg,var(--gold) var(--p,50%),rgba(255,255,255,.14) var(--p,50%));outline:none;cursor:pointer}
+.ctrl input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--navy);border:2px solid var(--gold);transition:transform .25s}
+.ctrl input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.25)}
+.ctrl input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--navy);border:2px solid var(--gold)}
+.grp{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding-top:10px;border-top:1px solid var(--line)}
+.out{position:sticky;top:110px;border:1px solid var(--line);background:linear-gradient(160deg,var(--navy-3),var(--navy-2));padding:clamp(24px,3.5vw,40px)}
+.kpi{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:14px 0;border-bottom:1px solid var(--line-2)}
+.kpi span{font-size:14px;color:var(--muted)}
+.kpi b{font-family:var(--serif);font-weight:300;font-size:26px;color:#fff;white-space:nowrap}
+.kpi.hero-k{border:0;padding-top:4px}
+.kpi.hero-k b{font-size:clamp(40px,4.4vw,58px);color:var(--gold)}
+.bars{margin-top:24px;display:flex;height:12px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.06)}
+.bars i{display:block;height:100%;transition:width .7s var(--ease-out)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-size:12px;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:7px;background:var(--c)}
+.insight{margin-top:24px;font-family:var(--serif);font-style:italic;font-size:19px;color:var(--gold-2);line-height:1.45}
+@media (max-width:900px){.sim{grid-template-columns:1fr}.out{position:relative;top:0}}
+
+/* diagnosis */
+.diag{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.q{margin-bottom:26px}
+.q h4{font-family:var(--sans);font-weight:600;font-size:15.5px;letter-spacing:0;margin-bottom:12px;color:var(--ink)}
+.q h4 i{font-style:normal;font-family:var(--mono);color:var(--gold-deep);margin-right:8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:1px solid rgba(13,22,38,.18);background:#fff;padding:9px 15px;border-radius:999px;font:500 13.5px var(--sans);color:var(--ink);cursor:pointer;transition:all .3s var(--ease)}
+.opt:hover{border-color:var(--gold-deep)}
+.opt.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.result{position:sticky;top:110px;background:var(--navy);color:var(--text);padding:clamp(26px,3.5vw,40px)}
+.result .tagbig{font-family:var(--serif);font-size:120px;line-height:.9;color:var(--gold);font-weight:300;transition:opacity .3s}
+.result h4{font-size:28px;margin:12px 0 10px;color:#fff}
+.result p{color:#b7bfcd;font-size:15px}
+.result .up{display:flex;gap:10px;align-items:center;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:#c9cfdb;cursor:pointer}
+.result .up input{accent-color:var(--gold);width:16px;height:16px}
+@media (max-width:900px){.diag{grid-template-columns:1fr}.result{position:relative;top:0}}
+.seq{margin-top:clamp(72px,10vw,110px);display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid rgba(13,22,38,.15)}
+.seq div{padding:22px 16px 0 0;position:relative}
+.seq div::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--gold-deep)}
+.seq b{font-family:var(--serif);font-weight:300;font-size:30px;color:var(--ink)}
+.seq em{display:block;font-style:normal;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin:4px 0 8px}
+.seq p{font-size:14px;color:var(--muted-dark);line-height:1.5}
+@media (max-width:900px){.seq{grid-template-columns:1fr 1fr 1fr;row-gap:30px}}
+@media (max-width:560px){.seq{grid-template-columns:1fr 1fr}}
+
+/* whatsapp */
+.wa{display:grid;grid-template-columns:1fr minmax(0,440px);gap:clamp(32px,6vw,90px);align-items:start}
+.phone{border:1px solid var(--line);border-radius:30px;padding:14px;background:#050c19;box-shadow:0 50px 100px rgba(0,0,0,.45)}
+.phone-top{display:flex;align-items:center;gap:12px;padding:12px 14px 14px;border-bottom:1px solid var(--line-2)}
+.phone-top .av{width:36px;height:36px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:var(--navy);font-family:var(--serif)}
+.phone-top b{font-size:14px;color:#fff;display:block;font-weight:600}
+.phone-top small{font-size:11.5px;color:var(--muted)}
+.chat{padding:18px 8px 8px;display:flex;flex-direction:column;gap:10px;min-height:420px}
+.msg{max-width:88%;padding:11px 14px;border-radius:14px;font-size:14px;line-height:1.5;opacity:0;transform:translateY(12px) scale(.98);transition:all .7s var(--ease-out)}
+.chat.in .msg{opacity:1;transform:none}
+.msg.me{align-self:flex-end;background:#134e3a;color:#e8f3ee;border-bottom-right-radius:4px}
+.msg.them{align-self:flex-start;background:#17243d;color:#d9dfeb;border-bottom-left-radius:4px}
+.msg small{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-bottom:4px;text-transform:uppercase}
+.wa-steps{display:grid;gap:30px}
+.wa-steps h4{font-size:24px;margin-bottom:8px}
+.wa-steps h4 small{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--gold);margin-left:10px;text-transform:uppercase}
+.wa-steps p{color:#c3c9d6;font-size:15.5px}
+.fu{border-top:1px solid var(--line);padding-top:24px}
+.fu li{list-style:none;color:#c3c9d6;font-size:15px;margin-bottom:10px;padding-left:20px;position:relative}
+.fu li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:1px;background:var(--gold)}
+.fu li b{color:var(--gold-2);font-weight:600}
+@media (max-width:900px){.wa{grid-template-columns:1fr}}
+
+/* mentorships */
+.ments{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.ment{border:1px solid rgba(13,22,38,.14);overflow:hidden;background:#fff;transition:transform .6s var(--ease-out),box-shadow .6s}
+.ment:hover{transform:translateY(-6px);box-shadow:0 30px 70px rgba(13,22,38,.14)}
+.ment .top{padding:clamp(26px,3.5vw,40px);background:var(--navy);color:#fff}
+.ment.gold .top{background:linear-gradient(160deg,#e6cb93,#c19d5c);color:var(--navy)}
+.ment .top small{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;opacity:.75}
+.ment .top h3{font-size:clamp(28px,3vw,38px);margin:12px 0 8px}
+.ment .top b{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4vw,50px)}
+.ment ul{list-style:none;padding:clamp(24px,3.5vw,36px);display:grid;gap:12px}
+.ment li{font-size:15.5px;color:#3a4254;padding-left:22px;position:relative}
+.ment li::before{content:"";position:absolute;left:0;top:11px;width:10px;height:1px;background:var(--gold-deep)}
+@media (max-width:820px){.ments{grid-template-columns:1fr}}
+.call{margin-top:clamp(64px,9vw,100px);display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:c}
+.call div{border-top:2px solid var(--gold-deep);padding-top:18px}
+.call b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;margin-bottom:8px}
+.call b::before{counter-increment:c;content:"0" counter(c) " ";font-family:var(--mono);font-size:12px;color:var(--gold-deep);vertical-align:middle;margin-right:4px}
+.call p{font-size:14.5px;color:var(--muted-dark)}
+@media (max-width:900px){.call{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.call{grid-template-columns:1fr}}
+.callouts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:48px}
+.callout{border:1px solid rgba(168,134,74,.45);padding:26px 28px;background:#fffdf8}
+.callout small{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep)}
+.callout p{margin-top:10px;color:#3a4254;font-size:15.5px}
+@media (max-width:820px){.callouts{grid-template-columns:1fr}}
+
+/* objections */
+.objs{display:grid;gap:0;border-top:1px solid var(--line)}
+.obj{border-bottom:1px solid var(--line)}
+.obj summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.6vw,34px);color:#fff;transition:color .3s}
+.obj summary::-webkit-details-marker{display:none}
+.obj summary:hover{color:var(--gold-2)}
+.obj summary::after{content:"+";font-family:var(--sans);font-weight:300;font-size:28px;color:var(--gold);transition:transform .5s var(--ease)}
+.obj[open] summary::after{transform:rotate(45deg)}
+.obj p{padding:0 0 28px;max-width:760px;font-size:17px;color:#c3c9d6}
+.obj p::before{content:"Resposta  ";font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-right:8px}
+
+/* kpis + compliance */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px)}
+.two h3{font-size:clamp(28px,3vw,38px);margin-bottom:24px}
+.ind{display:grid;grid-template-columns:130px 1fr;border-bottom:1px solid rgba(13,22,38,.1);padding:15px 0;gap:16px}
+.ind b{font-size:14.5px;color:var(--ink)}
+.ind span{font-size:14.5px;color:var(--muted-dark)}
+.comp li{list-style:none;padding:15px 0 15px 34px;border-bottom:1px solid rgba(13,22,38,.1);position:relative;font-size:15.5px;color:#3a4254}
+.comp li::before{content:"";position:absolute;left:0;top:19px;width:18px;height:18px;border-radius:50%;border:1px solid var(--gold-deep);background:radial-gradient(circle,var(--gold-deep) 3px,transparent 4px)}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+
+/* checklist */
+.check{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ck{display:grid;grid-template-columns:26px 1fr;gap:14px;align-items:start;border:1px solid var(--line);padding:18px 20px;cursor:pointer;transition:border-color .4s,background .4s;font-size:15px;color:#c9cfdb}
+.ck:hover{border-color:rgba(212,180,118,.5)}
+.ck .bx{width:22px;height:22px;border:1px solid var(--gold);border-radius:4px;display:grid;place-items:center;transition:background .3s}
+.ck.on{background:rgba(212,180,118,.07)}
+.ck.on .bx{background:var(--gold)}
+.ck.on .bx::after{content:"";width:6px;height:11px;border:solid var(--navy);border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.ck.on span{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(212,180,118,.6)}
+.ckbar{display:flex;align-items:center;gap:18px;margin-bottom:32px;font-family:var(--mono);font-size:12px;color:var(--gold-2);letter-spacing:.1em}
+.ckbar div{flex:1;height:2px;background:rgba(255,255,255,.1);position:relative}
+.ckbar i{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .6s var(--ease-out)}
+@media (max-width:760px){.check{grid-template-columns:1fr}}
+
+/* close */
+.close{min-height:90svh;display:grid;place-items:center;text-align:center;overflow:hidden;background:radial-gradient(80% 70% at 50% 100%,#1a3460,var(--navy) 70%)}
+.close h2{font-size:clamp(42px,7vw,100px);max-width:1100px;margin:28px auto}
+.close p{color:var(--muted);max-width:620px;margin:0 auto}
+footer{padding:36px 0;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="glow" id="glow"></div>
+
+<nav class="nav" id="nav">
+  <a class="brand" href="#top"><div class="mono-mark">PA</div><span>Dr. Pedro Abrahão</span></a>
+  <ul class="nav-links">
+    <li><a href="#narrativa">Narrativa</a></li>
+    <li><a href="#metodo">Método</a></li>
+    <li><a href="#escada">Escada</a></li>
+    <li><a href="#vsl">VSL</a></li>
+    <li><a href="#simulador">Simulador</a></li>
+    <li><a href="#comercial">Comercial</a></li>
+  </ul>
+  <a class="nav-cta" href="#simulador">Simular o funil</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-art" aria-hidden="true">
+    <div class="ring"></div><div class="ring"></div><div class="ring"></div><div class="ring"></div>
+    <div class="orb"></div>
+    <div class="orbit"><div class="dot"></div></div>
+  </div>
+  <div class="wrap">
+    <div class="kicker">Playbook de lançamento perpétuo</div>
+    <h1><span class="ln"><span>Clínica de</span></span><span class="ln"><span><em>Alto Padrão</em></span></span></h1>
+    <p class="thesis rv" style="--d:.5s">A medicina te ensinou a cuidar de vidas. <b>Ninguém te ensinou a construir a sua.</b> Um programa para o médico que quer deixar de depender da escala e para o médico que já tem consultório, mas ainda não tem uma empresa.</p>
+    <div class="ladder rv" style="--d:.7s">
+      <div><strong data-count="297">R$ 297</strong><span>Entrada · VSL</span></div>
+      <div><strong data-count="3497">R$ 3.497</strong><span>Formação completa</span></div>
+      <div><strong>R$ 15 mil</strong><span>Conselho · 3 meses</span></div>
+      <div><strong>R$ 50 mil</strong><span>Executivo · 6 meses</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<!-- LETTER -->
+<section class="light pad">
+  <div class="wrap letter">
+    <div class="big rv">A maioria das clínicas não quebra por falta de paciente. Quebra por falta de <em>empresa</em>.</div>
+    <div class="rv" style="--d:.15s">
+      <p>Pedro, eu peguei o playbook inteiro e transformei numa página só, porque quero que você enxergue o produto do começo ao fim antes de gravar uma linha da VSL. Aqui estão a história que a gente conta, o método, a escada de ofertas, os roteiros e a conversa que leva o médico até a mentoria.</p>
+      <p>Defini o produto de entrada a R$ 297 por um motivo simples: ele precisa pagar a mídia. O lucro do projeto está na conversa individual que vem depois, e quem chega até ela já comprou de você, já assistiu às aulas e já respondeu um diagnóstico. Por isso as mentorias não aparecem em nenhuma página pública. Elas só existem no WhatsApp.</p>
+      <p>Também deixei um simulador para você mexer nos números e ver onde está o dinheiro, e um diagnóstico interativo que mostra como cada comprador ganha uma etiqueta.</p>
+      <div class="sign">Felipe</div>
+    </div>
+  </div>
+</section>
+
+<!-- NARRATIVE -->
+<section class="pad" id="narrativa">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">01 · A narrativa</div>
+      <h2 class="rv">Dois médicos, <em>o mesmo problema</em></h2>
+      <p class="lead rv">Quem compra este programa está em um de dois lugares. Escrevi uma linha de história para cada um, e é ela que conduz os anúncios, o gancho da VSL e a primeira mensagem no WhatsApp.</p>
+    </div>
+    <div class="tabs rv" role="tablist">
+      <button class="tab on" data-t="plantao" role="tab">Ainda vive de plantão</button>
+      <button class="tab" data-t="consultorio" role="tab">Já tem consultório</button>
+    </div>
+
+    <div class="story on" id="s-plantao">
+      <div class="who">
+        <span class="tag">Perfil 1 · 28 a 40 anos</span>
+        <h3>O médico da <em>escala</em></h3>
+        <p>Estudou mais de dez anos, atende bem e tem orgulho do que faz. Quer o próprio consultório, de alto padrão, com o nome dele na porta. O que falta é saber em que ordem tomar as decisões.</p>
+      </div>
+      <ol class="beats">
+        <li class="beat" style="transition-delay:.05s"><time>07:00</time><p>Termina um plantão de 24 horas e dirige para casa sem lembrar do caminho.</p></li>
+        <li class="beat" style="transition-delay:.15s"><time>Domingo</time><p>Abre o grupo da escala para descobrir como vai ser a semana. Quem decide a agenda dele é uma planilha.</p></li>
+        <li class="beat" style="transition-delay:.25s"><time>Há dois anos</time><p>Quer abrir o consultório, mas não sabe quanto investir, qual sala alugar, nem se a conta fecha.</p></li>
+        <li class="beat" style="transition-delay:.35s"><time>O medo</time><p>Assinar um contrato de aluguel errado e voltar para o plantão com uma dívida.</p></li>
+        <li class="beat" style="transition-delay:.45s"><time>Então</time><p>Fica. Mais um mês de escala, e o plano vai para o ano que vem.</p></li>
+        <li class="beat turn" style="transition-delay:.55s"><time>A virada</time><p>Ele aprende a decidir o modelo antes da sala e o número antes da reforma, e sai do plantão com calma, sem pular no escuro.</p></li>
+      </ol>
+    </div>
+
+    <div class="story" id="s-consultorio">
+      <div class="who">
+        <span class="tag">Perfil 2 · 35 a 55 anos</span>
+        <h3>O médico da <em>agenda cheia</em></h3>
+        <p>Já tem consultório ou clínica, tem paciente e tem nome na cidade. Atende como especialista e administra improvisando. A clínica cresce até onde ele aguenta, e para ali.</p>
+      </div>
+      <ol class="beats">
+        <li class="beat" style="transition-delay:.05s"><time>Segunda</time><p>Agenda cheia até sexta. A secretária interrompe a consulta para perguntar se pode encaixar mais um.</p></li>
+        <li class="beat" style="transition-delay:.15s"><time>Dia 30</time><p>Faturou bem e o dinheiro não aparece. Ele não sabe a margem de uma consulta.</p></li>
+        <li class="beat" style="transition-delay:.25s"><time>A equipe</time><p>Pergunta tudo para ele. Se ele tira uma semana de férias, a clínica para.</p></li>
+        <li class="beat" style="transition-delay:.35s"><time>O concorrente</time><p>O paciente que paga mais vai para a clínica ao lado, que nem atende melhor. Só parece maior.</p></li>
+        <li class="beat" style="transition-delay:.45s"><time>O teto</time><p>Para vender mais, ele precisa atender mais. Para atender mais, precisa estar mais horas dentro da sala.</p></li>
+        <li class="beat turn" style="transition-delay:.55s"><time>A virada</time><p>Ele passa a ter preço sustentado por posicionamento, números na mesa, processos que a equipe executa e uma captação que não depende só de indicação.</p></li>
+      </ol>
+    </div>
+
+    <div class="converge rv">
+      <h3>Os dois sofrem do mesmo jeito: têm um <em>consultório</em> e chamam de clínica.</h3>
+      <p>O consultório depende do tempo do médico. A empresa depende de um modelo: público definido, preço sustentado por posicionamento, números acompanhados, processos que a equipe executa e uma forma previsível de atrair pacientes. É essa diferença que o programa ensina, e é por isso que ele serve tanto para quem vai abrir quanto para quem já abriu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CAUSE -->
+<section class="light pad">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">02 · A causa real</div>
+      <h2 class="rv">O problema não é você. <em>É a ordem das decisões.</em></h2>
+      <p class="lead rv">A faculdade forma médicos, não donos de empresa. Na VSL, o Pedro nomeia três erros que o público reconhece na hora.</p>
+    </div>
+    <div class="errors">
+      <div class="err rv"><div class="n">01</div><h4>Abrir pela estrutura</h4><p>Alugar sala, reformar e comprar equipamento antes de decidir para quem é a clínica e por que ela vale mais.</p></div>
+      <div class="err rv" style="--d:.1s"><div class="n">02</div><h4>Precificar olhando o vizinho</h4><p>Copiar o preço do concorrente em vez de sustentar o preço com posicionamento e experiência.</p></div>
+      <div class="err rv" style="--d:.2s"><div class="n">03</div><h4>Depender só de indicação</h4><p>Ter a agenda nas mãos do boca a boca, sem nenhuma forma previsível de atrair o paciente certo.</p></div>
+    </div>
+    <div class="quote-band rv">
+      <blockquote>“Uma clínica sem ritual de gestão é um <em>consultório com CNPJ</em>.”</blockquote>
+      <cite>Dr. Pedro Abrahão</cite>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="pad deep" id="metodo">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">03 · O método</div>
+      <h2 class="rv">Seis pilares, <em>na ordem em que as decisões precisam ser tomadas</em></h2>
+      <p class="lead rv">“Eu organizei tudo o que precisei aprender na prática em seis pilares.” A sequência importa: ninguém deveria pensar em marketing antes de saber se a conta fecha.</p>
+    </div>
+    <div class="stack">
+      <article class="pillar" style="--i:0"><div class="rn">I</div><div><h3>Modelo de negócio</h3><p class="why">Antes de alugar uma sala, você define para quem é a clínica e por que ela vale mais.</p></div><ul><li>Público e especialidade de entrada</li><li>Proposta de valor e diferencial defensável</li><li>Faixa de preço que o modelo sustenta</li></ul></article>
+      <article class="pillar" style="--i:1"><div class="rn">II</div><div><h3>Planejamento e estruturação</h3><p class="why">Quanto investir, quanto guardar de capital de giro e o que decidir antes de gastar.</p></div><ul><li>Investimento inicial e cronograma de abertura</li><li>Capital de giro para os primeiros meses</li><li>Contrato, ponto e dimensionamento da equipe</li></ul></article>
+      <article class="pillar" style="--i:2"><div class="rn">III</div><div><h3>Gestão financeira</h3><p class="why">Margem de contribuição, fluxo de caixa e os indicadores que mostram se a clínica dá lucro.</p></div><ul><li>Margem por procedimento e por consulta</li><li>Ponto de equilíbrio e fluxo de caixa</li><li>Painel de indicadores do mês</li></ul></article>
+      <article class="pillar" style="--i:3"><div class="rn">IV</div><div><h3>Processos e equipe</h3><p class="why">Funções, rotinas e padrão de atendimento para a clínica funcionar sem você em tudo.</p></div><ul><li>Funções e responsabilidades claras</li><li>Rotinas de abertura, fechamento e gerência</li><li>Padrão de atendimento alto padrão</li></ul></article>
+      <article class="pillar" style="--i:4"><div class="rn">V</div><div><h3>Posicionamento e marketing</h3><p class="why">Marca premium, autoridade digital e fundamentos de captação.</p></div><ul><li>Marca e experiência alinhadas ao preço</li><li>Autoridade digital com ética médica</li><li>Jornada do paciente e captação previsível</li></ul></article>
+      <article class="pillar" style="--i:5"><div class="rn">VI</div><div><h3>Plano de implementação</h3><p class="why">Diagnóstico, gargalos e o plano dos próximos 90 dias.</p></div><ul><li>Diagnóstico da sua clínica hoje</li><li>Os três gargalos que travam o resto</li><li>Plano de 90 dias com responsáveis</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- LADDER -->
+<section class="light pad" id="escada">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">04 · A escada de valor</div>
+      <h2 class="rv">Cada degrau <em>qualifica o próximo</em></h2>
+      <p class="lead rv">Montei a escada para que o médico suba por decisão própria. A entrada é barata para ele experimentar o método; a formação aprofunda; as mentorias só aparecem para quem já mostrou que tem clínica, prazo e interesse.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div><div class="lvl">Degrau 1</div><h4>Programa</h4><p>Os seis pilares e um plano de 90 dias.</p></div><div><div class="price">R$ 297</div><div class="where">Página VSL · até 12x</div></div></div>
+      <div class="step rv" style="--d:.08s"><div><div class="lvl">Degrau 2</div><h4>Order bumps</h4><p>Kit Financeiro, Kit de Captação e Manual de Processos.</p></div><div><div class="price">R$ 47–97</div><div class="where">Checkout</div></div></div>
+      <div class="step rv" style="--d:.16s"><div><div class="lvl">Degrau 3</div><h4>Formação Completa</h4><p>Cerca de 5 horas em 6 trilhas, com modelos editáveis e estudos de caso.</p></div><div><div class="price">R$ 3.497</div><div class="where">Upsell 1 clique</div></div></div>
+      <div class="step rv" style="--d:.24s"><div><div class="lvl">Degrau 4 · Etiqueta B</div><h4>Conselho de Clínicas</h4><p>6 encontros quinzenais em grupo, diagnóstico e plano individual, hot seats.</p></div><div><div class="price">R$ 15.000</div><div class="where">Só no WhatsApp · 3 meses</div></div></div>
+      <div class="step rv" style="--d:.32s"><div><div class="lvl">Degrau 5 · Etiqueta A</div><h4>Conselho Executivo</h4><p>Sessões quinzenais, encontros presenciais, plano estratégico de 12 meses e experiência entre pares.</p></div><div><div class="price">R$ 50.000</div><div class="where">Só no WhatsApp · 6 meses</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FUNNEL -->
+<section class="pad" id="funil">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">05 · Arquitetura do funil</div>
+      <h2 class="rv">Seis etapas, <em>da primeira impressão à mentoria</em></h2>
+    </div>
+    <div class="flow" id="flow">
+      <svg viewBox="0 0 1000 4" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="2" x2="1000" y2="2" stroke="rgba(212,180,118,.18)" stroke-width="1"/><line id="flowLine" x1="0" y1="2" x2="1000" y2="2" stroke="#d4b476" stroke-width="1.5" stroke-dasharray="1000" stroke-dashoffset="1000"/></svg>
+      <div class="node"><div class="dot">1</div><h4>Anúncio</h4><p>Meta Ads, campanha de compra, três ângulos.</p></div>
+      <div class="node"><div class="dot">2</div><h4>Página VSL</h4><p>Vídeo de 14–18 min; a oferta aparece no minuto do pitch.</p></div>
+      <div class="node"><div class="dot">3</div><h4>Checkout</h4><p>R$ 297 e três order bumps.</p></div>
+      <div class="node"><div class="dot">4</div><h4>Upsell</h4><p>Formação Completa em 1 clique.</p></div>
+      <div class="node"><div class="dot">5</div><h4>Diagnóstico</h4><p>5 perguntas geram a etiqueta A, B ou C.</p></div>
+      <div class="node"><div class="dot">6</div><h4>WhatsApp</h4><p>Conversa individual, call e mentoria.</p></div>
+    </div>
+    <div class="table">
+      <div class="row rv"><b>Anúncio</b><span>Campanha de vendas (compra) com três ângulos: autonomia profissional, gestão e rentabilidade, posicionamento premium.</span></div>
+      <div class="row rv"><b>Página VSL</b><span>Vídeo de 14–18 min; a oferta é liberada no segundo exato do pitch (<code>revealSeconds</code>).</span></div>
+      <div class="row rv"><b>Checkout</b><span>Hotmart ou Kiwify. R$ 297 + bumps de R$ 67, R$ 97 e R$ 47. Campos obrigatórios: nome, e-mail, WhatsApp e CPF.</span></div>
+      <div class="row rv"><b>Upsell</b><span>Formação Completa R$ 3.497 em 1 clique. A recusa leva à página de obrigado.</span></div>
+      <div class="row rv"><b>Obrigado + diagnóstico</b><span>Formulário de 5 perguntas que gera a etiqueta de qualificação.</span></div>
+      <div class="row rv"><b>WhatsApp comercial</b><span>Sequência para todos os compradores, com abordagem individual para as etiquetas A e B.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- VSL -->
+<section class="paper pad" id="vsl">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">06 · Roteiro da VSL · R$ 297</div>
+      <h2 class="rv">17 minutos, <em>oito blocos</em></h2>
+      <p class="lead rv">Gravada pelo Pedro sentado, no consultório ou no escritório, com luz quente e tom de colega mais experiente. O pitch começa aos 11 minutos, e é nesse segundo que o botão aparece na página.</p>
+    </div>
+    <div class="rv">
+      <div class="minutebar" id="minutebar">
+        <div style="flex:60" data-b="1"><span>Gancho</span></div>
+        <div style="flex:120" data-b="2"><span>Identificação</span></div>
+        <div style="flex:150" data-b="3"><span>Causa</span></div>
+        <div style="flex:90" data-b="4"><span>Autoridade</span></div>
+        <div style="flex:240" data-b="5"><span>Método</span></div>
+        <div style="flex:150" class="pitch" data-b="6"><span>Oferta</span></div>
+        <div style="flex:120" class="pitch" data-b="7"><span>Garantia</span></div>
+        <div style="flex:90" class="pitch" data-b="8"><span>Fecho</span></div>
+        <span class="mark">revealSeconds · 11:00</span>
+      </div>
+      <div class="ticks"><span>0:00</span><span>5:00</span><span>10:00</span><span>17:00</span></div>
+    </div>
+    <div class="blocks">
+      <details class="blk rv" data-b="1" open><summary><span class="bn">01</span><h4>Gancho<small>Prender o médico certo</small></h4><span class="t">0:00–1:00</span><span class="pm"></span></summary><div class="body"><div class="script">“Se você é médico e pensa em abrir sua clínica, ou já tem uma e sente que ela só funciona quando você está dentro da sala, assista a este vídeo até o final. Nos próximos minutos eu vou te mostrar por que a maioria das clínicas não quebra por falta de paciente, e sim por falta de empresa. E como estruturar a sua para operar em alto padrão.”</div><p><b>Variante ângulo plantão:</b> “Você estudou mais de dez anos para cuidar de pessoas. Ninguém te ensinou a construir algo que funcione sem você dar plantão.”</p></div></details>
+      <details class="blk rv" data-b="2"><summary><span class="bn">02</span><h4>Identificação<small>Ele se reconhece no problema</small></h4><span class="t">1:00–3:00</span><span class="pm"></span></summary><div class="body"><div class="script">“Talvez você esteja em um destes três lugares. Primeiro: você quer abrir sua clínica, mas não sabe quanto investir, qual estrutura montar, nem se a conta fecha. Segundo: você vive de plantões e quer construir uma operação própria, com calma e planejamento. Terceiro: você já tem consultório ou clínica, atende bem, a agenda até enche, mas no fim do mês o dinheiro não aparece, a equipe depende de você pra tudo e o paciente que paga mais vai para o concorrente.”</div><p>Aqui entra uma história curta e real do Pedro: o momento em que percebeu que era um ótimo profissional, mas ainda não um empresário. É a ponte para as duas linhas de narrativa acima.</p></div></details>
+      <details class="blk rv" data-b="3"><summary><span class="bn">03</span><h4>Causa real<small>Consultório ≠ empresa</small></h4><span class="t">3:00–5:30</span><span class="pm"></span></summary><div class="body"><div class="script">“O problema não é você. A faculdade de medicina forma médicos, não donos de empresa. O consultório depende do seu tempo. A empresa depende de um modelo: público definido, preço sustentado por posicionamento, números acompanhados, processos que a equipe executa e uma forma previsível de atrair pacientes.”</div><p>Nomear os três erros: abrir pela estrutura física antes do modelo, precificar olhando o concorrente e depender só de indicação.</p></div></details>
+      <details class="blk rv" data-b="4"><summary><span class="bn">04</span><h4>Autoridade<small>Por que ouvir o Pedro</small></h4><span class="t">5:30–7:00</span><span class="pm"></span></summary><div class="body"><p>Trajetória em 60 a 90 segundos: formação, a clínica que ele estruturou e marcos verificáveis. Ele ainda atende todos os dias, e esse é o argumento mais forte: fala de dentro da operação. Apenas fatos comprováveis; números de faturamento só com contexto.</p></div></details>
+      <details class="blk rv" data-b="5"><summary><span class="bn">05</span><h4>Método<small>Os 6 pilares</small></h4><span class="t">7:00–11:00</span><span class="pm"></span></summary><div class="body"><div class="script">“Eu organizei tudo o que precisei aprender na prática em seis pilares, na ordem em que as decisões precisam ser tomadas.”</div><p>Uma frase de transformação por pilar, como na seção do método. Cerca de 40 segundos cada.</p></div></details>
+      <details class="blk rv" data-b="6"><summary><span class="bn">06</span><h4>Oferta<small>O que recebe e o preço</small></h4><span class="t">11:00–13:30</span><span class="pm"></span></summary><div class="body"><div class="script">“Por isso eu criei o programa Clínica de Alto Padrão. Você tem acesso imediato aos seis pilares, assiste no seu ritmo e termina com um plano de ação de 90 dias para a sua realidade. Uma consultoria de gestão para clínica custa milhares de reais. Um erro na abertura, um contrato de aluguel errado, uma equipe mal dimensionada, custa muito mais. O investimento no programa é de R$ 297, ou parcelado em até 12 vezes. Clique no botão abaixo deste vídeo.”</div></div></details>
+      <details class="blk rv" data-b="7"><summary><span class="bn">07</span><h4>Garantia e objeções<small>Remover o risco</small></h4><span class="t">13:30–15:30</span><span class="pm"></span></summary><div class="body"><div class="script">“Você tem 7 dias de garantia incondicional. Assista, aplique, e se não fizer sentido, peça o reembolso.”</div><p><b>“Não tenho tempo”</b> · aulas objetivas, no seu ritmo.<br><b>“Ainda não tenho clínica”</b> · é o melhor momento: antes de investir.<br><b>“Minha especialidade é diferente”</b> · gestão vale para qualquer especialidade.</p></div></details>
+      <details class="blk rv" data-b="8"><summary><span class="bn">08</span><h4>Fechamento<small>Chamada final</small></h4><span class="t">15:30–17:00</span><span class="pm"></span></summary><div class="body"><div class="script">“Você pode continuar atendendo bem, ou pode construir uma empresa. Clique no botão abaixo e comece hoje. Te vejo do lado de dentro.”</div></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- HOOKS -->
+<section class="pad" id="ganchos">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">07 · Ganchos de anúncio</div>
+      <h2 class="rv">Três ângulos, <em>os mesmos dois médicos</em></h2>
+      <p class="lead rv">Cada ângulo roda num conjunto separado (1-3-1), com o mesmo corpo de anúncio. Só os três primeiros segundos mudam, e o “Doutor(a), …” na primeira frase faz a segmentação que o público aberto não faz.</p>
+    </div>
+    <div class="hooks">
+      <div class="hook rv"><span class="ang">Autonomia · plantão</span><q>Você estudou 10 anos para depender de escala de plantão?</q><p>Operação própria com planejamento e gradualidade.</p></div>
+      <div class="hook rv" style="--d:.08s"><span class="ang">Autonomia · abertura</span><q>Antes de abrir sua clínica, responda 3 perguntas.</q><p>Decidir modelo e investimento antes de gastar.</p></div>
+      <div class="hook rv" style="--d:.16s"><span class="ang">Gestão</span><q>Agenda cheia e conta vazia? O problema não é paciente.</q><p>Dominar os números da clínica.</p></div>
+      <div class="hook rv"><span class="ang">Gestão</span><q>Você sabe a margem de uma consulta sua?</q><p>Precificação e margem de contribuição.</p></div>
+      <div class="hook rv" style="--d:.08s"><span class="ang">Premium</span><q>Por que o paciente que paga mais vai para a clínica ao lado.</q><p>Marca, experiência e preço alinhados.</p></div>
+      <div class="hook rv" style="--d:.16s"><span class="ang">Premium</span><q>Consultório não é empresa. E isso tem um custo.</q><p>Visão empresarial integrada.</p></div>
+    </div>
+    <p class="note rv"><b>Público:</b> interesses em gestão, empreendedorismo e medicina + Advantage+ aberto, com o criativo segmentando. Compradores excluídos via lista do checkout.</p>
+  </div>
+</section>
+
+<!-- CHECKOUT + UPSELL -->
+<section class="light pad" id="checkout">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">08 · Checkout e upsell</div>
+      <h2 class="rv">O ticket sobe <em>sem o médico perceber esforço</em></h2>
+    </div>
+    <div class="checkout">
+      <div class="co rv" id="co">
+        <div class="co-head"><b>Clínica de Alto Padrão</b><span>R$ 297</span></div>
+        <div class="bump" data-v="67"><div class="box"></div><div><b>Sim, quero ver os números da minha clínica</b><small>Kit Financeiro: custos, ponto de equilíbrio, fluxo de caixa, simulador de investimento e painel de indicadores.</small></div><div class="p">R$ 67</div></div>
+        <div class="bump" data-v="97"><div class="box"></div><div><b>Sim, quero o plano de captação pronto</b><small>Kit de Posicionamento e Captação: proposta de valor, planejamento editorial, jornada do paciente e planilha de leads.</small></div><div class="p">R$ 97</div></div>
+        <div class="bump" data-v="47"><div class="box"></div><div><b>Sim, quero rotinas que a equipe executa</b><small>Manual de Processos: checklists de abertura e fechamento, fluxo do paciente, funções e rotina gerencial.</small></div><div class="p">R$ 47</div></div>
+        <div class="co-total"><span>Total</span><b id="coTotal">R$ 297</b></div>
+      </div>
+      <div class="co-why rv" style="--d:.1s">
+        <h3>Por que eu coloquei <em>nessa ordem</em></h3>
+        <p>O financeiro vem primeiro porque é a dor mais imediata dos dois médicos: um não sabe se a conta fecha, o outro não sabe para onde vai o dinheiro. A captação vem no meio, com o preço mais alto, porque é o desejo mais forte. O manual, mais barato, fecha a lista como decisão fácil.</p>
+        <p>Clique nas caixas ao lado para ver o ticket mudar. Com as três marcadas, a compra vai de R$ 297 para R$ 508.</p>
+        <p class="note">Os preços dos bumps são hipóteses. Eu meço adesão a cada caixa e ticket médio antes de mexer em qualquer valor.</p>
+      </div>
+    </div>
+    <div class="upsell">
+      <div class="player rv"><div class="play"></div><span class="cap">Vídeo de upsell · 2–3 min</span></div>
+      <div class="rv" style="--d:.1s">
+        <div class="eyebrow">Formação Completa · R$ 3.497</div>
+        <div class="script" style="margin-top:22px">“Doutor(a), parabéns. Seu acesso já está confirmado. Antes de você entrar, quero te mostrar uma coisa. O programa que você comprou organiza as decisões essenciais. Mas cada pilar tem uma profundidade que não cabe nele. A Formação Completa é o curso integral: cerca de cinco horas, em seis trilhas, com planilhas, checklists e modelos editáveis, estudos de caso reais e um plano de implementação. Se a sua decisão é implementar, e não só entender, esse é o caminho. Se preferir seguir apenas com o que já adquiriu, tudo bem: o link está logo abaixo.”</div>
+        <p class="note">Sem pressão, no tom do Pedro. Quem recusa recebe a formação de novo no D+7 por e-mail e WhatsApp, e eu comparo as duas taxas de aceitação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIMULATOR -->
+<section class="pad deep" id="simulador">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">09 · Simulador do funil</div>
+      <h2 class="rv">Onde está <em>o dinheiro</em></h2>
+      <p class="lead rv">Mexa nas premissas. Os valores iniciais são hipóteses de partida, não promessa, e servem para mostrar uma coisa: a entrada paga a mídia, e o resultado do projeto mora na conversa individual.</p>
+    </div>
+    <div class="sim">
+      <div class="ctrls rv">
+        <div class="grp">Mídia</div>
+        <div class="ctrl"><label>Verba mensal no Meta <output id="o-verba"></output></label><input type="range" id="verba" min="5000" max="100000" step="1000" value="20000"></div>
+        <div class="ctrl"><label>Custo por compra (CPA) <output id="o-cpa"></output></label><input type="range" id="cpa" min="80" max="600" step="10" value="220"></div>
+        <div class="grp">Checkout e upsell</div>
+        <div class="ctrl"><label>Adesão ao Kit Financeiro (R$ 67) <output id="o-b1"></output></label><input type="range" id="b1" min="0" max="60" value="35"></div>
+        <div class="ctrl"><label>Adesão ao Kit de Captação (R$ 97) <output id="o-b2"></output></label><input type="range" id="b2" min="0" max="60" value="22"></div>
+        <div class="ctrl"><label>Adesão ao Manual (R$ 47) <output id="o-b3"></output></label><input type="range" id="b3" min="0" max="60" value="28"></div>
+        <div class="ctrl"><label>Aceitação do upsell (R$ 3.497) <output id="o-up"></output></label><input type="range" id="up" min="0" max="20" step=".5" value="5"></div>
+        <div class="grp">Qualificação e mentoria</div>
+        <div class="ctrl"><label>Compradores que respondem o diagnóstico <output id="o-dg"></output></label><input type="range" id="dg" min="20" max="90" value="60"></div>
+        <div class="ctrl"><label>Etiqueta A entre os diagnósticos <output id="o-pa"></output></label><input type="range" id="pa" min="0" max="20" value="6"></div>
+        <div class="ctrl"><label>Etiqueta B entre os diagnósticos <output id="o-pb"></output></label><input type="range" id="pb" min="0" max="40" value="18"></div>
+        <div class="ctrl"><label>Fechamento A → Executivo (R$ 50 mil) <output id="o-ca"></output></label><input type="range" id="ca" min="0" max="40" value="15"></div>
+        <div class="ctrl"><label>Fechamento B → Conselho (R$ 15 mil) <output id="o-cb"></output></label><input type="range" id="cb" min="0" max="40" value="20"></div>
+      </div>
+      <div class="out rv" style="--d:.1s">
+        <div class="kpi hero-k"><span>Receita bruta no mês</span><b id="r-total">—</b></div>
+        <div class="kpi"><span>Compradores do R$ 297</span><b id="r-buyers">—</b></div>
+        <div class="kpi"><span>Ticket médio no checkout</span><b id="r-ticket">—</b></div>
+        <div class="kpi"><span>ROAS só da entrada</span><b id="r-roas1">—</b></div>
+        <div class="kpi"><span>Conversas A + B no WhatsApp</span><b id="r-leads">—</b></div>
+        <div class="kpi"><span>Mentorias fechadas</span><b id="r-ments">—</b></div>
+        <div class="kpi"><span>ROAS do funil inteiro</span><b id="r-roas2">—</b></div>
+        <div class="bars"><i id="bar1" style="background:#8fa3c4"></i><i id="bar2" style="background:#c9cfdb"></i><i id="bar3" style="background:#a8864a"></i><i id="bar4" style="background:#ead3a0"></i></div>
+        <div class="legend"><span style="--c:#8fa3c4">Entrada + bumps</span><span style="--c:#c9cfdb">Formação</span><span style="--c:#a8864a">Conselho</span><span style="--c:#ead3a0">Executivo</span></div>
+        <p class="insight" id="insight"></p>
+      </div>
+    </div>
+    <p class="note rv">Valores brutos, antes de taxas da plataforma, impostos e parcelamento. Revisar as premissas com os dados dos primeiros 100 compradores.</p>
+  </div>
+</section>
+
+<!-- DIAGNOSIS -->
+<section class="paper pad" id="diagnostico">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">10 · Pós-compra e qualificação</div>
+      <h2 class="rv">Cinco perguntas <em>separam quem vai para a mentoria</em></h2>
+      <p class="lead rv">Todo comprador responde o diagnóstico na página de obrigado. Responda como se fosse um médico e veja a etiqueta que ele recebe no WhatsApp.</p>
+    </div>
+    <div class="diag">
+      <div class="rv" id="quiz">
+        <div class="q" data-q="hoje"><h4><i>01</i>Hoje você:</h4><div class="opts"><button class="opt" data-v="abrir">Pretende abrir em até 12 meses</button><button class="opt" data-v="consultorio">Tem consultório</button><button class="opt" data-v="clinica">Tem clínica com equipe</button></div></div>
+        <div class="q" data-q="fat"><h4><i>02</i>Faturamento mensal:</h4><div class="opts"><button class="opt" data-v="0">Ainda não tenho</button><button class="opt" data-v="50">Até R$ 50 mil</button><button class="opt" data-v="150">R$ 50–150 mil</button><button class="opt" data-v="151">Acima de R$ 150 mil</button></div></div>
+        <div class="q" data-q="gargalo"><h4><i>03</i>Maior gargalo:</h4><div class="opts"><button class="opt" data-v="financeiro">Financeiro</button><button class="opt" data-v="processos e equipe">Processos e equipe</button><button class="opt" data-v="captação">Captação</button><button class="opt" data-v="planejamento da abertura">Planejamento da abertura</button></div></div>
+        <div class="q" data-q="prazo"><h4><i>04</i>Prazo para resolver:</h4><div class="opts"><button class="opt" data-v="agora">Agora</button><button class="opt" data-v="3m">Próximos 3 meses</button><button class="opt" data-v="sem">Sem prazo</button></div></div>
+        <div class="q" data-q="int"><h4><i>05</i>Interesse em acompanhamento direto do Dr. Pedro:</h4><div class="opts"><button class="opt" data-v="sim">Sim</button><button class="opt" data-v="talvez">Talvez</button><button class="opt" data-v="nao">Não</button></div></div>
+      </div>
+      <div class="result rv" style="--d:.1s">
+        <div class="tagbig" id="tagBig">?</div>
+        <h4 id="tagTitle">Responda as cinco perguntas</h4>
+        <p id="tagText">A etiqueta define quem recebe a abordagem individual no D+12 e qual mentoria é apresentada na call.</p>
+        <label class="up"><input type="checkbox" id="upgrade"> Comprou o upsell ou 2 ou mais bumps (sobe uma etiqueta)</label>
+      </div>
+    </div>
+    <div class="seq">
+      <div class="rv"><b>D0</b><em>WhatsApp</em><p>Boas-vindas e link do diagnóstico.</p></div>
+      <div class="rv" style="--d:.06s"><b>D+2</b><em>WhatsApp</em><p>“Qual pilar você já assistiu?”</p></div>
+      <div class="rv" style="--d:.12s"><b>D+5</b><em>E-mail + WhatsApp</em><p>Estudo de caso curto de uma clínica.</p></div>
+      <div class="rv" style="--d:.18s"><b>D+7</b><em>WhatsApp</em><p>Reoferta da Formação para quem recusou o upsell.</p></div>
+      <div class="rv" style="--d:.24s"><b>D+10</b><em>Ao vivo</em><p>Aula “Diagnóstico da sua clínica” com hot seat e abertura das candidaturas.</p></div>
+      <div class="rv" style="--d:.3s"><b>D+12</b><em>WhatsApp</em><p>Abordagem individual para A e B.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP -->
+<section class="pad" id="comercial">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">11 · Abordagem comercial</div>
+      <h2 class="rv">A mentoria é vendida <em>por conversa, nunca por link</em></h2>
+      <p class="lead rv">O WhatsApp leva a uma call de diagnóstico de 30 a 45 minutos, e a proposta só sai na call. Quem conduz é o Pedro ou um closer apresentado como “time do Dr. Pedro”.</p>
+    </div>
+    <div class="wa">
+      <div class="wa-steps">
+        <div class="rv"><h4>Mensagem 1 <small>D+12 · A e B</small></h4><p>Abre citando o gargalo que o próprio médico escreveu no diagnóstico. Ele sente que alguém leu o que ele respondeu.</p></div>
+        <div class="rv"><h4>Mensagem 2 <small>Após resposta</small></h4><p>Duas perguntas que fazem o médico descrever o futuro e admitir o que já tentou. Ninguém fala de preço aqui.</p></div>
+        <div class="rv"><h4>Mensagem 3 <small>Convite</small></h4><p>Grupo reduzido, conversa de diagnóstico sem custo, dois horários fechados para escolher.</p></div>
+        <ul class="fu rv">
+          <li><b>+24 h sem resposta:</b> “Dr(a). [Nome], consegue me responder por aqui? Se preferir, mando um áudio.”</li>
+          <li><b>+72 h:</b> “Última mensagem sobre isso pra não te incomodar: as conversas de diagnóstico deste ciclo fecham em [data]. Se fizer sentido, é só responder ‘quero’.”</li>
+          <li>Depois disso, volta para a etiqueta C.</li>
+        </ul>
+      </div>
+      <div class="phone rv" style="--d:.1s">
+        <div class="phone-top"><div class="av">PA</div><div><b>Time Dr. Pedro Abrahão</b><small>online</small></div></div>
+        <div class="chat" id="chat">
+          <div class="msg me" style="transition-delay:.1s"><small>Mensagem 1</small>Oi, Dr(a). [Nome], tudo bem? Aqui é [Nome], do time do Dr. Pedro Abrahão. Vi seu diagnóstico no programa Clínica de Alto Padrão. Você comentou que o maior gargalo hoje é [gargalo]. Posso te fazer duas perguntas rápidas sobre isso?</div>
+          <div class="msg them" style="transition-delay:.9s">Pode sim, claro.</div>
+          <div class="msg me" style="transition-delay:1.5s"><small>Mensagem 2</small>1) Se esse gargalo estivesse resolvido daqui a 90 dias, o que mudaria na sua clínica?<br>2) O que você já tentou para resolver até agora?</div>
+          <div class="msg them" style="transition-delay:2.3s">Eu teria tempo pra pensar a clínica em vez de só atender…</div>
+          <div class="msg me" style="transition-delay:2.9s"><small>Mensagem 3</small>Faz sentido. O Dr. Pedro acompanha um grupo reduzido de médicos na implementação, e antes de qualquer coisa ele faz uma conversa de diagnóstico para entender se o seu momento encaixa. São 30 minutos, sem custo. Tenho [dia] às [hora] ou [dia] às [hora]. Qual fica melhor?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTORSHIPS + CALL -->
+<section class="light pad">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">12 · Qual mentoria oferecer na call</div>
+      <h2 class="rv">Uma mentoria só, <em>a do perfil</em></h2>
+      <p class="lead rv">Na call, o médico ouve falar de uma única opção, ligada ao gargalo que ele mesmo descreveu. Apresentar as duas abriria uma comparação de preço que não ajuda ninguém.</p>
+    </div>
+    <div class="ments">
+      <div class="ment rv"><div class="top"><small>Etiqueta B · 3 meses</small><h3>Conselho de Clínicas</h3><b>R$ 15.000</b></div><ul><li>6 encontros em grupo, quinzenais, on-line</li><li>Diagnóstico e plano de ação individual</li><li>Hot seats e grupo privado</li><li>Revisão de metas e indicadores</li><li>Para clínica em operação ou abertura concreta</li></ul></div>
+      <div class="ment gold rv" style="--d:.1s"><div class="top"><small>Etiqueta A · 6 meses</small><h3>Conselho Executivo de Clínicas</h3><b>R$ 50.000</b></div><ul><li>Sessões on-line quinzenais e encontros presenciais</li><li>Diagnóstico individual e plano estratégico de 12 meses</li><li>Hot seats, comunidade e biblioteca de ferramentas</li><li>Experiência entre pares</li><li>Para clínica com equipe que quer expandir</li></ul></div>
+    </div>
+    <div class="call">
+      <div class="rv"><b>Situação</b><p>Estrutura, equipe, faturamento e como chegam os pacientes.</p></div>
+      <div class="rv" style="--d:.06s"><b>Objetivo</b><p>Onde quer estar em 6 e 12 meses, nos números dele.</p></div>
+      <div class="rv" style="--d:.12s"><b>Gargalo</b><p>O que impede, e quanto custa cada mês sem resolver.</p></div>
+      <div class="rv" style="--d:.18s"><b>Apresentação</b><p>Cada entrega ligada ao gargalo que ele citou.</p></div>
+      <div class="rv" style="--d:.24s"><b>Proposta</b><p>Preço, condições, início da turma e vagas. Silêncio após o preço.</p></div>
+    </div>
+    <div class="callouts">
+      <div class="callout rv"><small>Perfil A que hesita nos R$ 50 mil</small><p>Oferecer o Conselho de Clínicas como entrada, com crédito do valor pago caso migre para o Executivo no ciclo seguinte.</p></div>
+      <div class="callout rv" style="--d:.1s"><small>Antes de vender o Executivo</small><p>Definir quantidade, duração e local dos encontros presenciais, despesas inclusas, tamanho máximo do grupo, suporte entre encontros e regras de confidencialidade.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIONS -->
+<section class="pad">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">13 · Objeções na call</div>
+      <h2 class="rv">Cinco frases que <em>vão aparecer</em></h2>
+    </div>
+    <div class="objs rv">
+      <details class="obj"><summary>“Está caro.”</summary><p>“Comparado a quê? Você me disse que [gargalo] custa cerca de [valor dele] por mês. O programa é pensado para resolver isso em [3/6] meses.”</p></details>
+      <details class="obj"><summary>“Não tenho tempo.”</summary><p>“São [6 encontros / sessões quinzenais]. A mentoria existe justamente para você parar de resolver tudo sozinho.”</p></details>
+      <details class="obj"><summary>“Preciso pensar.”</summary><p>“Claro. O que exatamente você precisa avaliar: o investimento, o momento ou se o formato resolve?”</p></details>
+      <details class="obj"><summary>“Vou falar com meu sócio ou cônjuge.”</summary><p>“Faz sentido. Quer marcar 20 minutos com ele(a) junto, amanhã?”</p></details>
+      <details class="obj"><summary>“Já fiz consultoria e não funcionou.”</summary><p>“O que faltou? Aqui o foco é implementação com metas e responsáveis, revisadas a cada encontro.”</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- KPIs + COMPLIANCE -->
+<section class="light pad">
+  <div class="wrap two">
+    <div class="rv">
+      <div class="eyebrow">14 · Indicadores</div>
+      <h3 style="margin-top:20px">O que eu acompanho <em>em cada etapa</em></h3>
+      <div class="ind"><b>Anúncio</b><span>CPM, CTR, custo por play</span></div>
+      <div class="ind"><b>VSL</b><span>Retenção até o pitch, conversão, CPA</span></div>
+      <div class="ind"><b>Checkout</b><span>Adesão a cada bump, ticket médio</span></div>
+      <div class="ind"><b>Upsell</b><span>Aceitação imediata vs. D+7</span></div>
+      <div class="ind"><b>Pós-compra</b><span>% diagnóstico, % A e B</span></div>
+      <div class="ind"><b>WhatsApp</b><span>Resposta, calls, comparecimento</span></div>
+      <div class="ind"><b>Mentoria</b><span>Conversão, retenção, reembolsos</span></div>
+    </div>
+    <div class="rv" style="--d:.1s">
+      <div class="eyebrow">15 · Compliance</div>
+      <h3 style="margin-top:20px">O que <em>nunca</em> sai da boca do Pedro</h3>
+      <ul class="comp">
+        <li>Promessa de faturamento, lucro ou saída dos plantões em prazo garantido.</li>
+        <li>Casos e números reais sem autorização por escrito e sem contexto.</li>
+        <li>Mensagem comercial para quem não informou o WhatsApp no checkout (LGPD). Sempre com opção de sair.</li>
+        <li>Fotos capturadas do Instagram. Só originais em alta.</li>
+        <li>Preços tratados como definitivos: são hipóteses até os primeiros 100 compradores.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="pad deep" id="checklist">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">16 · Checklist técnico</div>
+      <h2 class="rv">O que precisa estar pronto <em>antes do primeiro real de mídia</em></h2>
+      <p class="lead rv">Pode marcar aqui mesmo; o progresso fica salvo neste navegador.</p>
+    </div>
+    <div class="ckbar rv"><span id="ckCount">0/9</span><div><i id="ckFill" style="width:0"></i></div></div>
+    <div class="check rv" id="check">
+      <div class="ck"><div class="bx"></div><span>Subir o vídeo no Vturb ou Panda e colar o embed em <code>CONFIG.vslEmbed</code></span></div>
+      <div class="ck"><div class="bx"></div><span>Definir <code>CONFIG.revealSeconds</code> com o segundo exato do pitch</span></div>
+      <div class="ck"><div class="bx"></div><span>Colar o link do checkout em <code>CONFIG.checkoutUrl</code> (UTMs repassadas automaticamente)</span></div>
+      <div class="ck"><div class="bx"></div><span>Configurar os 3 order bumps e o upsell de 1 clique na plataforma</span></div>
+      <div class="ck"><div class="bx"></div><span>Salvar as fotos como <code>pedro-hero.jpg</code> (16:9) e <code>pedro-bio.jpg</code> (4:5)</span></div>
+      <div class="ck"><div class="bx"></div><span>Preencher bio, credenciais e prazo de acesso (campos entre colchetes)</span></div>
+      <div class="ck"><div class="bx"></div><span>Pixel + CAPI: PageView, ViewContent (play), InitiateCheckout, Purchase com value; Purchase separado para o upsell</span></div>
+      <div class="ck"><div class="bx"></div><span>Webhook da plataforma → CRM ou planilha com tag do produto e dos bumps</span></div>
+      <div class="ck"><div class="bx"></div><span>WhatsApp Business dedicado ao comercial, com etiquetas A, B e C</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="close">
+  <div class="wrap">
+    <div class="eyebrow rv" style="justify-content:center">Fechamento da VSL</div>
+    <h2 class="rv">Você pode continuar <em>atendendo bem.</em><br>Ou pode construir uma empresa.</h2>
+    <p class="rv">É a frase que fecha a VSL, e é também o resumo do produto inteiro.</p>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>Clínica de Alto Padrão · Dr. Pedro Abrahão</span><span>Documento de trabalho · outubro 2026</span></div></footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lenis = null;
+  if (window.Lenis && !reduce) {
+    lenis = new Lenis({ lerp: .085, smoothWheel: true });
+    window.__lenis = lenis;
+    const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+    requestAnimationFrame(raf);
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const el = document.querySelector(a.getAttribute('href'));
+    if (!el) return;
+    e.preventDefault();
+    lenis ? lenis.scrollTo(el, { offset: -70, duration: 1.6 }) : el.scrollIntoView({ behavior: 'smooth' });
+  }));
+
+  // hero
+  requestAnimationFrame(() => setTimeout(() => document.querySelector('.hero').classList.add('ready'), 80));
+
+  // reveal
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.rv, .chat').forEach(el => io.observe(el));
+
+  // counters
+  const fmt = n => 'R$ ' + Math.round(n).toLocaleString('pt-BR');
+  const cio = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, end = +el.dataset.count, t0 = performance.now();
+    const tick = t => { const p = Math.min(1, (t - t0) / 1600), k = 1 - Math.pow(1 - p, 3); el.textContent = fmt(end * k); if (p < 1) requestAnimationFrame(tick); };
+    if (!reduce) requestAnimationFrame(tick);
+    cio.unobserve(el);
+  }), { threshold: .6 });
+  document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+  // scroll-linked
+  const nav = document.getElementById('nav'), bar = document.getElementById('progress');
+  const flow = document.getElementById('flow'), line = document.getElementById('flowLine'), nodes = flow.querySelectorAll('.node');
+  const art = document.querySelector('.hero-art');
+  const onScroll = () => {
+    const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = `scaleX(${h > 0 ? y / h : 0})`;
+    nav.classList.toggle('solid', y > 40);
+    if (!reduce && y < innerHeight * 1.2) art.style.transform = `translateY(calc(-55% + ${y * .25}px)) rotate(${y * .02}deg)`;
+    const r = flow.getBoundingClientRect();
+    const p = Math.max(0, Math.min(1, (innerHeight * .8 - r.top) / (innerHeight * .55)));
+    line.style.strokeDashoffset = 1000 - 1000 * p;
+    nodes.forEach((n, i) => n.classList.toggle('lit', p >= i / 5 - .001));
+  };
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // cursor glow
+  const glow = document.getElementById('glow');
+  addEventListener('pointermove', e => { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; }, { passive: true });
+
+  // narrative tabs
+  document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(x => x.classList.toggle('on', x === b));
+    document.querySelectorAll('.story').forEach(s => s.classList.remove('on'));
+    const s = document.getElementById('s-' + b.dataset.t);
+    void s.offsetWidth; s.classList.add('on');
+    lenis && lenis.resize();
+  }));
+
+  // vsl minute bar <-> blocks
+  const mb = document.querySelectorAll('#minutebar div'), blks = document.querySelectorAll('.blk');
+  mb.forEach(seg => seg.addEventListener('click', () => {
+    const b = document.querySelector(`.blk[data-b="${seg.dataset.b}"]`);
+    blks.forEach(x => x.open = x === b);
+    lenis ? lenis.scrollTo(b, { offset: -120, duration: 1.2 }) : b.scrollIntoView({ behavior: 'smooth' });
+  }));
+  blks.forEach(b => b.addEventListener('toggle', () => {
+    mb.forEach(s => s.classList.toggle('hl', s.dataset.b === b.dataset.b && b.open));
+    lenis && setTimeout(() => lenis.resize(), 50);
+  }));
+  document.querySelectorAll('.obj').forEach(o => o.addEventListener('toggle', () => lenis && setTimeout(() => lenis.resize(), 50)));
+
+  // checkout bumps
+  const bumps = document.querySelectorAll('.bump'), coTotal = document.getElementById('coTotal');
+  bumps.forEach(b => b.addEventListener('click', () => {
+    b.classList.toggle('on');
+    let t = 297; bumps.forEach(x => x.classList.contains('on') && (t += +x.dataset.v));
+    coTotal.textContent = fmt(t);
+  }));
+
+  // simulator
+  const ids = ['verba','cpa','b1','b2','b3','up','dg','pa','pb','ca','cb'];
+  const $ = id => document.getElementById(id);
+  const brl = n => n >= 1e6 ? 'R$ ' + (n / 1e6).toLocaleString('pt-BR', { maximumFractionDigits: 2 }) + ' mi' : fmt(n);
+  const dec = n => n.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
+  const sim = () => {
+    const v = Object.fromEntries(ids.map(i => [i, +$(i).value]));
+    ids.forEach(i => {
+      const el = $(i), p = (el.value - el.min) / (el.max - el.min) * 100;
+      el.style.setProperty('--p', p + '%');
+      $('o-' + i).textContent = i === 'verba' || i === 'cpa' ? fmt(v[i]) : dec(v[i]) + '%';
+    });
+    const buyers = v.verba / v.cpa;
+    const front = buyers * (297 + v.b1 / 100 * 67 + v.b2 / 100 * 97 + v.b3 / 100 * 47);
+    const form = buyers * v.up / 100 * 3497;
+    const diag = buyers * v.dg / 100, la = diag * v.pa / 100, lb = diag * v.pb / 100;
+    const ea = la * v.ca / 100, eb = lb * v.cb / 100;
+    const exec = ea * 50000, cons = eb * 15000, total = front + form + exec + cons;
+    $('r-total').textContent = brl(total);
+    $('r-buyers').textContent = dec(buyers);
+    $('r-ticket').textContent = fmt(front / buyers);
+    $('r-roas1').textContent = dec(front / v.verba) + 'x';
+    $('r-leads').textContent = dec(la + lb);
+    $('r-ments').textContent = dec(ea + eb);
+    $('r-roas2').textContent = dec(total / v.verba) + 'x';
+    [front, form, cons, exec].forEach((x, i) => $('bar' + (i + 1)).style.width = (total ? x / total * 100 : 0) + '%');
+    const share = total ? Math.round((cons + exec) / total * 100) : 0;
+    $('insight').textContent = front >= v.verba
+      ? `A entrada já se paga (${dec(front / v.verba)}x). As mentorias respondem por ${share}% da receita, vindas de ${dec(la + lb)} conversas.`
+      : `A entrada ainda não paga a mídia (${dec(front / v.verba)}x): o CPA precisa cair ou o ticket do checkout subir antes de escalar. As mentorias respondem por ${share}% da receita.`;
+  };
+  ids.forEach(i => $(i).addEventListener('input', sim)); sim();
+
+  // diagnosis
+  const ans = {};
+  const tags = {
+    A: ['Conselho Executivo', 'Clínica com equipe, faturamento acima de R$ 150 mil e prazo “agora”. Recebe a abordagem individual no D+12 e, na call, ouve falar só do Executivo.'],
+    B: ['Conselho de Clínicas', 'Consultório, clínica ou abertura em até 12 meses, com interesse no acompanhamento. Recebe a abordagem individual no D+12.'],
+    C: ['Nutrir e reofertar', 'Sem prazo ou sem interesse agora. Segue recebendo conteúdo, a aula ao vivo e a reoferta da Formação.']
+  };
+  const tagIt = () => {
+    const done = ['hoje','fat','gargalo','prazo','int'].every(k => ans[k]);
+    const big = $('tagBig');
+    if (!done) { big.textContent = '?'; $('tagTitle').textContent = 'Responda as cinco perguntas'; return; }
+    let t = 'C';
+    if (ans.hoje === 'clinica' && ans.fat === '151' && ans.prazo === 'agora') t = 'A';
+    else if (ans.prazo !== 'sem' && ans.int !== 'nao') t = 'B';
+    if ($('upgrade').checked) t = t === 'C' ? 'B' : 'A';
+    big.style.opacity = 0;
+    setTimeout(() => { big.textContent = t; big.style.opacity = 1; }, 180);
+    $('tagTitle').textContent = 'Etiqueta ' + t + ' · ' + tags[t][0];
+    $('tagText').textContent = tags[t][1] + (t !== 'C' ? ` A primeira mensagem cita o gargalo dele: ${ans.gargalo}.` : '');
+  };
+  document.querySelectorAll('.q').forEach(q => q.querySelectorAll('.opt').forEach(o => o.addEventListener('click', () => {
+    q.querySelectorAll('.opt').forEach(x => x.classList.toggle('on', x === o));
+    ans[q.dataset.q] = o.dataset.v; tagIt();
+  })));
+  $('upgrade').addEventListener('change', tagIt);
+
+  // checklist
+  const cks = document.querySelectorAll('.ck'), KEY = 'cap-checklist';
+  let saved = [];
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) {}
+  const upd = () => {
+    const on = [...cks].map(c => c.classList.contains('on'));
+    const n = on.filter(Boolean).length;
+    $('ckCount').textContent = n + '/' + cks.length;
+    $('ckFill').style.width = n / cks.length * 100 + '%';
+    try { localStorage.setItem(KEY, JSON.stringify(on)); } catch (e) {}
+  };
+  cks.forEach((c, i) => { if (saved[i]) c.classList.add('on'); c.addEventListener('click', () => { c.classList.toggle('on'); upd(); }); });
+  upd();
+})();
+</script>
+</body>
+</html>
