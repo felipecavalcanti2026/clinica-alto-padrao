@@ -109,6 +109,30 @@ h2 em,h1 em,h3 em{font-style:italic;color:var(--gold)}
 .scroll-cue{position:absolute;left:50%;bottom:18px;width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.4s var(--ease) infinite;transform-origin:top}
 @keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
 
+
+/* portrait */
+.hero-portrait{position:absolute;top:0;right:0;bottom:0;width:min(46vw,760px);z-index:1;pointer-events:none;opacity:0;transform:scale(1.04);transition:opacity 1.8s var(--ease-out) .2s,transform 2.4s var(--ease-out) .2s;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 38%),linear-gradient(to top,transparent 0%,#000 30%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0%,#000 38%),linear-gradient(to top,transparent 0%,#000 30%);mask-composite:intersect}
+.hero.ready .hero-portrait{opacity:1;transform:none}
+.hero-portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;filter:saturate(.8) brightness(.88) contrast(1.05)}
+.hero-portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(8,20,41,0) 40%,rgba(8,20,41,.55));mix-blend-mode:multiply}
+.hero .wrap{position:relative;z-index:3}
+.hero-cap{position:absolute;right:clamp(16px,5vw,64px);top:50%;z-index:3;writing-mode:vertical-rl;font-family:var(--mono);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-2);opacity:.8}
+@media (max-width:860px){.hero-portrait{width:100%;bottom:auto;height:66svh;opacity:0;
+  -webkit-mask-image:linear-gradient(to top,transparent 0%,#000 55%);mask-image:linear-gradient(to top,transparent 0%,#000 55%);-webkit-mask-composite:source-over;mask-composite:add}
+  .hero.ready .hero-portrait{opacity:.7}.hero-portrait img{object-position:58% 10%}.hero-cap{display:none}}
+.letter-photo{margin-top:44px;max-width:400px;position:relative}
+.letter-photo::before{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid rgba(168,134,74,.5)}
+.letter-photo .ph{position:relative;overflow:hidden;aspect-ratio:4/5}
+.letter-photo img{width:100%;height:115%;object-fit:cover;object-position:50% 0;filter:saturate(.88);will-change:transform}
+.letter-photo figcaption{position:relative;margin-top:30px;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep)}
+.letter-photo figcaption span{display:block;color:var(--muted-dark);letter-spacing:.12em;margin-top:4px}
+.close-grid{display:grid;grid-template-columns:minmax(0,.8fr) 1.2fr;gap:clamp(40px,7vw,100px);align-items:center;text-align:left}
+.close-grid h2{margin:24px 0;font-size:clamp(40px,5vw,76px)}
+.close-grid p{margin:0}
+.close-ph{position:relative;overflow:hidden;aspect-ratio:2/3;max-height:78svh;-webkit-mask-image:linear-gradient(to top,transparent 0%,#000 28%);mask-image:linear-gradient(to top,transparent 0%,#000 28%)}
+.close-ph img{width:100%;height:112%;object-fit:cover;object-position:50% 0;filter:saturate(.82) brightness(.92);will-change:transform}
+@media (max-width:860px){.close-grid{grid-template-columns:1fr;text-align:center}.close-ph{max-width:340px;margin:0 auto}.close-grid .eyebrow{justify-content:center}}
 /* intro letter */
 .letter{display:grid;grid-template-columns:1fr 1.35fr;gap:clamp(40px,7vw,110px);align-items:start}
 .letter .big{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.4vw,58px);line-height:1.08;letter-spacing:-.02em}
@@ -397,7 +421,7 @@ code{font-family:var(--mono);font-size:.86em;background:rgba(212,180,118,.12);co
 @media (max-width:760px){.check{grid-template-columns:1fr}}
 
 /* close */
-.close{min-height:90svh;display:grid;place-items:center;text-align:center;overflow:hidden;background:radial-gradient(80% 70% at 50% 100%,#1a3460,var(--navy) 70%)}
+.close{min-height:90svh;display:grid;place-items:center;padding:clamp(96px,12vw,140px) 0;overflow:hidden;background:radial-gradient(80% 70% at 50% 100%,#1a3460,var(--navy) 70%)}
 .close h2{font-size:clamp(42px,7vw,100px);max-width:1100px;margin:28px auto}
 .close p{color:var(--muted);max-width:620px;margin:0 auto}
 footer{padding:36px 0;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
@@ -428,6 +452,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="orb"></div>
     <div class="orbit"><div class="dot"></div></div>
   </div>
+  <div class="hero-portrait" aria-hidden="true"><img src="img/pedro-hero.jpg" alt="" fetchpriority="high"></div>
+  <div class="hero-cap" aria-hidden="true">Dr. Pedro Abrahão</div>
   <div class="wrap">
     <div class="kicker">Playbook de lançamento perpétuo</div>
     <h1><span class="ln"><span>Clínica de</span></span><span class="ln"><span><em>Alto Padrão</em></span></span></h1>
@@ -445,7 +471,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <!-- LETTER -->
 <section class="light pad">
   <div class="wrap letter">
-    <div class="big rv">A maioria das clínicas não quebra por falta de paciente. Quebra por falta de <em>empresa</em>.</div>
+    <div class="rv"><div class="big">A maioria das clínicas não quebra por falta de paciente. Quebra por falta de <em>empresa</em>.</div><figure class="letter-photo"><div class="ph"><img class="par" data-k=".12" src="img/pedro-sentado.jpg" alt="Dr. Pedro Abrahão" loading="lazy"></div><figcaption>Dr. Pedro Abrahão<span>Médico · Americana-SP · atende todos os dias</span></figcaption></figure></div>
     <div class="rv" style="--d:.15s">
       <p>Pedro, eu peguei o playbook inteiro e transformei numa página só, porque quero que você enxergue o produto do começo ao fim antes de gravar uma linha da VSL. Aqui estão a história que a gente conta, o método, a escada de ofertas, os roteiros e a conversa que leva o médico até a mentoria.</p>
       <p>Defini o produto de entrada a R$ 297 por um motivo simples: ele precisa pagar a mídia. O lucro do projeto está na conversa individual que vem depois, e quem chega até ela já comprou de você, já assistiu às aulas e já respondeu um diagnóstico. Por isso as mentorias não aparecem em nenhuma página pública. Elas só existem no WhatsApp.</p>
@@ -775,7 +801,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         </ul>
       </div>
       <div class="phone rv" style="--d:.1s">
-        <div class="phone-top"><div class="av">PA</div><div><b>Time Dr. Pedro Abrahão</b><small>online</small></div></div>
+        <div class="phone-top"><div class="av" style="background:url(img/pedro-avatar.jpg) center/cover"></div><div><b>Time Dr. Pedro Abrahão</b><small>online</small></div></div>
         <div class="chat" id="chat">
           <div class="msg me" style="transition-delay:.1s"><small>Mensagem 1</small>Oi, Dr(a). [Nome], tudo bem? Aqui é [Nome], do time do Dr. Pedro Abrahão. Vi seu diagnóstico no programa Clínica de Alto Padrão. Você comentou que o maior gargalo hoje é [gargalo]. Posso te fazer duas perguntas rápidas sobre isso?</div>
           <div class="msg them" style="transition-delay:.9s">Pode sim, claro.</div>
@@ -884,10 +910,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <!-- CLOSE -->
 <section class="close">
-  <div class="wrap">
-    <div class="eyebrow rv" style="justify-content:center">Fechamento da VSL</div>
-    <h2 class="rv">Você pode continuar <em>atendendo bem.</em><br>Ou pode construir uma empresa.</h2>
-    <p class="rv">É a frase que fecha a VSL, e é também o resumo do produto inteiro.</p>
+  <div class="wrap close-grid">
+    <div class="close-ph rv"><img class="par" data-k=".1" src="img/pedro-colega.jpg" alt="Dr. Pedro Abrahão" loading="lazy"></div>
+    <div>
+      <div class="eyebrow rv">Fechamento da VSL</div>
+      <h2 class="rv">Você pode continuar <em>atendendo bem.</em><br>Ou pode construir uma empresa.</h2>
+      <p class="rv">É a frase que fecha a VSL, e é também o resumo do produto inteiro. Dita por um médico que ainda atende todos os dias, de colega para colega.</p>
+    </div>
   </div>
 </section>
 
@@ -934,6 +963,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   const nav = document.getElementById('nav'), bar = document.getElementById('progress');
   const flow = document.getElementById('flow'), line = document.getElementById('flowLine'), nodes = flow.querySelectorAll('.node');
   const art = document.querySelector('.hero-art');
+  const pars = document.querySelectorAll('.par');
   const onScroll = () => {
     const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
     bar.style.transform = `scaleX(${h > 0 ? y / h : 0})`;
@@ -943,6 +973,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     const p = Math.max(0, Math.min(1, (innerHeight * .8 - r.top) / (innerHeight * .55)));
     line.style.strokeDashoffset = 1000 - 1000 * p;
     nodes.forEach((n, i) => n.classList.toggle('lit', p >= i / 5 - .001));
+    if (!reduce) pars.forEach(el => { const r = el.parentElement.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) el.style.transform = `translateY(${-(r.top + r.height / 2 - innerHeight / 2) * el.dataset.k - r.height * .06}px)`; });
   };
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
