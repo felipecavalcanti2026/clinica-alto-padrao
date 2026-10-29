@@ -427,6 +427,17 @@ code{font-family:var(--mono);font-size:.86em;background:rgba(212,180,118,.12);co
 footer{padding:36px 0;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
+.volume{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,5vw,64px);margin-top:48px;padding:clamp(28px,4vw,48px);background:var(--navy);color:var(--text)}
+.volume small{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.volume h3{font-size:clamp(26px,3vw,38px);margin-top:14px;color:#fff}
+.volume h3 em{color:var(--gold)}
+.volume p{color:#c3c9d6;font-size:15.5px}
+.volume .note{color:var(--muted);font-size:13px;margin-top:14px}
+.vol-math{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:22px;border:1px solid var(--line)}
+.vol-math span{background:var(--navy-2);padding:16px;font-family:var(--serif);font-size:clamp(19px,1.8vw,24px);color:var(--gold);white-space:nowrap}
+.vol-math b{display:block;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+@media (max-width:860px){.volume{grid-template-columns:1fr}}
+@media (max-width:420px){.vol-math{grid-template-columns:1fr}}
 /* ===== responsive fixes ===== */
 .close .close-grid h2{font-size:clamp(40px,4.6vw,68px)}
 @media (max-width:860px){
@@ -549,7 +560,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="rv"><div class="big">A maioria das clínicas não quebra por falta de paciente. Quebra por falta de <em>empresa</em>.</div><figure class="letter-photo"><div class="ph"><img class="par" data-k=".12" src="img/pedro-sentado.jpg" alt="Dr. Pedro Abrahão" loading="lazy"></div><figcaption>Dr. Pedro Abrahão<span>Médico · Americana-SP · atende todos os dias</span></figcaption></figure></div>
     <div class="rv" style="--d:.15s">
       <p>Pedro, eu peguei o playbook inteiro e transformei numa página só, porque quero que você enxergue o produto do começo ao fim antes de gravar uma linha da VSL. Aqui estão a história que a gente conta, o método, a escada de ofertas, os roteiros e a conversa que leva o médico até a mentoria.</p>
-      <p>Defini o produto de entrada a R$ 297 por um motivo simples: ele precisa pagar a mídia. O lucro do projeto está na conversa individual que vem depois, e quem chega até ela já comprou de você, já assistiu às aulas e já respondeu um diagnóstico. Por isso as mentorias não aparecem em nenhuma página pública. Elas só existem no WhatsApp.</p>
+      <p>Defini o produto de entrada a R$ 297 por um motivo simples: ele precisa pagar a mídia. O lucro do projeto está na conversa comercial que vem depois, e quem chega até ela já comprou de você, já assistiu às aulas e já respondeu um diagnóstico. Por isso as mentorias não aparecem em nenhuma página pública. Elas só existem no WhatsApp.</p>
       <p>Também deixei um simulador para você mexer nos números e ver onde está o dinheiro, e um diagnóstico interativo que mostra como cada comprador ganha uma etiqueta.</p>
       <div class="sign">Felipe</div>
     </div>
@@ -659,7 +670,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="step rv"><div><div class="lvl">Degrau 1</div><h4>Programa</h4><p>Os seis pilares e um plano de 90 dias.</p></div><div><div class="price">R$ 297</div><div class="where">Página VSL · até 12x</div></div></div>
       <div class="step rv" style="--d:.08s"><div><div class="lvl">Degrau 2</div><h4>Order bumps</h4><p>Kit Financeiro, Kit de Captação e Manual de Processos.</p></div><div><div class="price">R$ 47–97</div><div class="where">Checkout</div></div></div>
       <div class="step rv" style="--d:.16s"><div><div class="lvl">Degrau 3</div><h4>Formação Completa</h4><p>Cerca de 5 horas em 6 trilhas, com modelos editáveis e estudos de caso.</p></div><div><div class="price">R$ 3.497</div><div class="where">Upsell 1 clique</div></div></div>
-      <div class="step rv" style="--d:.24s"><div><div class="lvl">Degrau 4 · Etiqueta B</div><h4>Conselho de Clínicas</h4><p>6 encontros quinzenais em grupo, diagnóstico e plano individual, hot seats.</p></div><div><div class="price">R$ 15.000</div><div class="where">Só no WhatsApp · 3 meses</div></div></div>
+      <div class="step rv" style="--d:.24s"><div><div class="lvl">Degrau 4 · Etiqueta B</div><h4>Conselho de Clínicas</h4><p>Turma em grupo: 6 encontros quinzenais on-line, hot seats e comunidade. Nada individual.</p></div><div><div class="price">R$ 15.000</div><div class="where">Agente comercial · turma 3 meses</div></div></div>
       <div class="step rv" style="--d:.32s"><div><div class="lvl">Degrau 5 · Etiqueta A</div><h4>Conselho Executivo</h4><p>Sessões quinzenais, encontros presenciais, plano estratégico de 12 meses e experiência entre pares.</p></div><div><div class="price">R$ 50.000</div><div class="where">Só no WhatsApp · 6 meses</div></div></div>
     </div>
   </div>
@@ -679,7 +690,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="node"><div class="dot">3</div><h4>Checkout</h4><p>R$ 297 e três order bumps.</p></div>
       <div class="node"><div class="dot">4</div><h4>Upsell</h4><p>Formação Completa em 1 clique.</p></div>
       <div class="node"><div class="dot">5</div><h4>Diagnóstico</h4><p>5 perguntas geram a etiqueta A, B ou C.</p></div>
-      <div class="node"><div class="dot">6</div><h4>WhatsApp</h4><p>Conversa individual, call e mentoria.</p></div>
+      <div class="node"><div class="dot">6</div><h4>WhatsApp</h4><p>Agente comercial, call e turma.</p></div>
     </div>
     <div class="table">
       <div class="row rv"><b>Anúncio</b><span>Campanha de vendas (compra) com três ângulos: autonomia profissional, gestão e rentabilidade, posicionamento premium.</span></div>
@@ -687,7 +698,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="row rv"><b>Checkout</b><span>Hotmart ou Kiwify. R$ 297 + bumps de R$ 67, R$ 97 e R$ 47. Campos obrigatórios: nome, e-mail, WhatsApp e CPF.</span></div>
       <div class="row rv"><b>Upsell</b><span>Formação Completa R$ 3.497 em 1 clique. A recusa leva à página de obrigado.</span></div>
       <div class="row rv"><b>Obrigado + diagnóstico</b><span>Formulário de 5 perguntas que gera a etiqueta de qualificação.</span></div>
-      <div class="row rv"><b>WhatsApp comercial</b><span>Sequência para todos os compradores, com abordagem individual para as etiquetas A e B.</span></div>
+      <div class="row rv"><b>WhatsApp comercial</b><span>Sequência para todos os compradores, com abordagem do agente comercial para as etiquetas A e B.</span></div>
     </div>
   </div>
 </section>
@@ -786,7 +797,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="head">
       <div class="eyebrow rv">09 · Simulador do funil</div>
       <h2 class="rv">Onde está <em>o dinheiro</em></h2>
-      <p class="lead rv">Mexa nas premissas. Os valores iniciais são hipóteses de partida, não promessa, e servem para mostrar uma coisa: a entrada paga a mídia, e o resultado do projeto mora na conversa individual.</p>
+      <p class="lead rv">Mexa nas premissas. Os valores iniciais são hipóteses de partida, não promessa, e servem para mostrar uma coisa: a entrada paga a mídia, e o resultado do projeto mora na conversa comercial.</p>
     </div>
     <div class="sim">
       <div class="ctrls rv">
@@ -841,7 +852,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="result rv" style="--d:.1s">
         <div class="tagbig" id="tagBig">?</div>
         <h4 id="tagTitle">Responda as cinco perguntas</h4>
-        <p id="tagText">A etiqueta define quem recebe a abordagem individual no D+12 e qual mentoria é apresentada na call.</p>
+        <p id="tagText">A etiqueta define quem recebe a abordagem do agente comercial no D+12 e qual mentoria é apresentada na call.</p>
         <label class="up"><input type="checkbox" id="upgrade"> Comprou o upsell ou 2 ou mais bumps (sobe uma etiqueta)</label>
       </div>
     </div>
@@ -851,7 +862,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="rv" style="--d:.12s"><b>D+5</b><em>E-mail + WhatsApp</em><p>Estudo de caso curto de uma clínica.</p></div>
       <div class="rv" style="--d:.18s"><b>D+7</b><em>WhatsApp</em><p>Reoferta da Formação para quem recusou o upsell.</p></div>
       <div class="rv" style="--d:.24s"><b>D+10</b><em>Ao vivo</em><p>Aula “Diagnóstico da sua clínica” com hot seat e abertura das candidaturas.</p></div>
-      <div class="rv" style="--d:.3s"><b>D+12</b><em>WhatsApp</em><p>Abordagem individual para A e B.</p></div>
+      <div class="rv" style="--d:.3s"><b>D+12</b><em>WhatsApp</em><p>Agente comercial aborda A e B.</p></div>
     </div>
   </div>
 </section>
@@ -862,13 +873,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="head">
       <div class="eyebrow rv">11 · Abordagem comercial</div>
       <h2 class="rv">A mentoria é vendida <em>por conversa, nunca por link</em></h2>
-      <p class="lead rv">O WhatsApp leva a uma call de diagnóstico de 30 a 45 minutos, e a proposta só sai na call. Quem conduz é o Pedro ou um closer apresentado como “time do Dr. Pedro”.</p>
+      <p class="lead rv">O WhatsApp leva a uma call de diagnóstico de 30 a 45 minutos, e a proposta só sai na call. Quem conduz a conversa e a call de fechamento é o agente comercial, apresentado como “time do Dr. Pedro”. O Pedro não entra na venda: o tempo dele vai para os encontros da turma.</p>
     </div>
     <div class="wa">
       <div class="wa-steps">
         <div class="rv"><h4>Mensagem 1 <small>D+12 · A e B</small></h4><p>Abre citando o gargalo que o próprio médico escreveu no diagnóstico. Ele sente que alguém leu o que ele respondeu.</p></div>
         <div class="rv"><h4>Mensagem 2 <small>Após resposta</small></h4><p>Duas perguntas que fazem o médico descrever o futuro e admitir o que já tentou. Ninguém fala de preço aqui.</p></div>
-        <div class="rv"><h4>Mensagem 3 <small>Convite</small></h4><p>Grupo reduzido, conversa de diagnóstico sem custo, dois horários fechados para escolher.</p></div>
+        <div class="rv"><h4>Mensagem 3 <small>Convite</small></h4><p>Turma do Dr. Pedro, conversa de diagnóstico sem custo com o time, dois horários fechados para escolher.</p></div>
         <ul class="fu rv">
           <li><b>+24 h sem resposta:</b> “Dr(a). [Nome], consegue me responder por aqui? Se preferir, mando um áudio.”</li>
           <li><b>+72 h:</b> “Última mensagem sobre isso pra não te incomodar: as conversas de diagnóstico deste ciclo fecham em [data]. Se fizer sentido, é só responder ‘quero’.”</li>
@@ -882,7 +893,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="msg them" style="transition-delay:.9s">Pode sim, claro.</div>
           <div class="msg me" style="transition-delay:1.5s"><small>Mensagem 2</small>1) Se esse gargalo estivesse resolvido daqui a 90 dias, o que mudaria na sua clínica?<br>2) O que você já tentou para resolver até agora?</div>
           <div class="msg them" style="transition-delay:2.3s">Eu teria tempo pra pensar a clínica em vez de só atender…</div>
-          <div class="msg me" style="transition-delay:2.9s"><small>Mensagem 3</small>Faz sentido. O Dr. Pedro acompanha um grupo reduzido de médicos na implementação, e antes de qualquer coisa ele faz uma conversa de diagnóstico para entender se o seu momento encaixa. São 30 minutos, sem custo. Tenho [dia] às [hora] ou [dia] às [hora]. Qual fica melhor?</div>
+          <div class="msg me" style="transition-delay:2.9s"><small>Mensagem 3</small>Faz sentido. O Dr. Pedro conduz as turmas de implementação do programa, e antes de qualquer coisa o nosso time faz uma conversa de diagnóstico para entender se o seu momento encaixa. São 30 minutos, sem custo. Tenho [dia] às [hora] ou [dia] às [hora]. Qual fica melhor?</div>
         </div>
       </div>
     </div>
@@ -895,10 +906,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="head">
       <div class="eyebrow rv">12 · Qual mentoria oferecer na call</div>
       <h2 class="rv">Uma mentoria só, <em>a do perfil</em></h2>
-      <p class="lead rv">Na call, o médico ouve falar de uma única opção, ligada ao gargalo que ele mesmo descreveu. Apresentar as duas abriria uma comparação de preço que não ajuda ninguém.</p>
+      <p class="lead rv">Na call com o agente comercial, o médico ouve falar de uma única opção, ligada ao gargalo que ele mesmo descreveu. Apresentar as duas abriria uma comparação de preço que não ajuda ninguém.</p>
     </div>
     <div class="ments">
-      <div class="ment rv"><div class="top"><small>Etiqueta B · 3 meses</small><h3>Conselho de Clínicas</h3><b>R$ 15.000</b></div><ul><li>6 encontros em grupo, quinzenais, on-line</li><li>Diagnóstico e plano de ação individual</li><li>Hot seats e grupo privado</li><li>Revisão de metas e indicadores</li><li>Para clínica em operação ou abertura concreta</li></ul></div>
+      <div class="ment rv"><div class="top"><small>Etiqueta B · 3 meses · em grupo</small><h3>Conselho de Clínicas</h3><b>R$ 15.000</b></div><ul><li>Turma em grupo, com 6 encontros quinzenais on-line conduzidos pelo Dr. Pedro</li><li>Plano de ação no modelo do programa, revisado em grupo a cada encontro</li><li>Hot seats rotativos: os casos de alguns médicos viram aula para a turma inteira</li><li>Comunidade privada da turma</li><li>Revisão de metas e indicadores em grupo</li><li>Para clínica em operação ou abertura concreta</li></ul></div>
       <div class="ment gold rv" style="--d:.1s"><div class="top"><small>Etiqueta A · 6 meses</small><h3>Conselho Executivo de Clínicas</h3><b>R$ 50.000</b></div><ul><li>Sessões on-line quinzenais e encontros presenciais</li><li>Diagnóstico individual e plano estratégico de 12 meses</li><li>Hot seats, comunidade e biblioteca de ferramentas</li><li>Experiência entre pares</li><li>Para clínica com equipe que quer expandir</li></ul></div>
     </div>
     <div class="call">
@@ -907,6 +918,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="rv" style="--d:.12s"><b>Gargalo</b><p>O que impede, e quanto custa cada mês sem resolver.</p></div>
       <div class="rv" style="--d:.18s"><b>Apresentação</b><p>Cada entrega ligada ao gargalo que ele citou.</p></div>
       <div class="rv" style="--d:.24s"><b>Proposta</b><p>Preço, condições, início da turma e vagas. Silêncio após o preço.</p></div>
+    </div>
+    <div class="volume rv">
+      <div><small>Por que o Conselho é todo em grupo</small><h3>A agenda do Pedro é a mesma para <em>1 ou para 40 médicos</em></h3></div>
+      <div><p>São 6 encontros por turma, tenha ela 10 ou 40 alunos. Por isso nada no Conselho é individual: nem diagnóstico, nem plano, nem a call de fechamento, que fica com o agente comercial. O limite do faturamento deixa de ser o tempo do Pedro e passa a ser a capacidade do time comercial de fechar.</p>
+      <div class="vol-math"><span><b>10 alunos</b>R$ 150 mil</span><span><b>20 alunos</b>R$ 300 mil</span><span><b>40 alunos</b>R$ 600 mil</span></div>
+      <p class="note">Por turma de 3 meses, valores brutos. O tamanho máximo da turma é decisão do Pedro antes da primeira venda.</p></div>
     </div>
     <div class="callouts">
       <div class="callout rv"><small>Perfil A que hesita nos R$ 50 mil</small><p>Oferecer o Conselho de Clínicas como entrada, com crédito do valor pago caso migre para o Executivo no ciclo seguinte.</p></div>
@@ -1122,8 +1139,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   // diagnosis
   const ans = {};
   const tags = {
-    A: ['Conselho Executivo', 'Clínica com equipe, faturamento acima de R$ 150 mil e prazo “agora”. Recebe a abordagem individual no D+12 e, na call, ouve falar só do Executivo.'],
-    B: ['Conselho de Clínicas', 'Consultório, clínica ou abertura em até 12 meses, com interesse no acompanhamento. Recebe a abordagem individual no D+12.'],
+    A: ['Conselho Executivo', 'Clínica com equipe, faturamento acima de R$ 150 mil e prazo “agora”. Recebe a abordagem do agente comercial no D+12 e, na call, ouve falar só do Executivo.'],
+    B: ['Conselho de Clínicas', 'Consultório, clínica ou abertura em até 12 meses, com interesse no acompanhamento. Recebe a abordagem do agente comercial no D+12 e é convidado para a próxima turma.'],
     C: ['Nutrir e reofertar', 'Sem prazo ou sem interesse agora. Segue recebendo conteúdo, a aula ao vivo e a reoferta da Formação.']
   };
   const tagIt = () => {
