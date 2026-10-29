@@ -42,7 +42,7 @@ body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:100
 
 /* nav */
 .nav{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px clamp(16px,5vw,64px);transition:background .5s var(--ease),padding .5s var(--ease)}
-.nav.solid{background:rgba(8,20,41,.74);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px);padding-top:13px;padding-bottom:13px;border-bottom:1px solid var(--line)}
+.nav.solid{background:rgba(8,20,41,.94);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px);padding-top:13px;padding-bottom:13px;border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .mono-mark{width:38px;height:38px;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);color:var(--gold);font-size:16px;letter-spacing:.04em}
 .brand span{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
@@ -122,7 +122,7 @@ h2 em,h1 em,h3 em{font-style:italic;color:var(--gold)}
   -webkit-mask-image:linear-gradient(to top,transparent 0%,#000 55%);mask-image:linear-gradient(to top,transparent 0%,#000 55%);-webkit-mask-composite:source-over;mask-composite:add}
   .hero.ready .hero-portrait{opacity:.7}.hero-portrait img{object-position:58% 10%}.hero-cap{display:none}}
 .letter-photo{margin-top:44px;max-width:400px;position:relative}
-.letter-photo::before{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid rgba(168,134,74,.5)}
+.letter-photo::before{content:"";position:absolute;top:16px;left:16px;width:100%;aspect-ratio:4/5;border:1px solid rgba(168,134,74,.5)}
 .letter-photo .ph{position:relative;overflow:hidden;aspect-ratio:4/5}
 .letter-photo img{width:100%;height:115%;object-fit:cover;object-position:50% 0;filter:saturate(.88);will-change:transform}
 .letter-photo figcaption{position:relative;margin-top:30px;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep)}
@@ -228,7 +228,7 @@ code{font-family:var(--mono);font-size:.86em;background:rgba(212,180,118,.12);co
 .minutebar div{border-right:1px solid rgba(13,22,38,.1);display:flex;align-items:flex-end;padding:8px;font-family:var(--mono);font-size:10px;color:var(--muted-dark);overflow:hidden;white-space:nowrap;transition:background .4s}
 .minutebar div:hover,.minutebar div.hl{background:rgba(212,180,118,.22)}
 .minutebar .pitch{background:rgba(212,180,118,.16)}
-.minutebar .mark{position:absolute;top:-30px;left:calc(660/1020*100%);transform:translateX(-50%);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--gold-deep);white-space:nowrap}
+.minutebar .mark{position:absolute;top:-30px;left:calc(960/1500*100%);transform:translateX(-50%);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--gold-deep);white-space:nowrap}
 .minutebar .mark::after{content:"";position:absolute;left:50%;top:22px;width:1px;height:66px;background:var(--gold-deep)}
 .ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--muted-dark);margin-bottom:56px}
 .blocks{display:grid;gap:14px}
@@ -426,6 +426,81 @@ code{font-family:var(--mono);font-size:.86em;background:rgba(212,180,118,.12);co
 .close p{color:var(--muted);max-width:620px;margin:0 auto}
 footer{padding:36px 0;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ===== responsive fixes ===== */
+.close .close-grid h2{font-size:clamp(40px,4.6vw,68px)}
+@media (max-width:860px){
+  .story .who{position:static}
+  .story.on{gap:36px}
+  .pillar{position:relative;top:auto;box-shadow:none;min-height:0}
+  .stack{gap:14px}
+  .scroll-cue{display:none}
+  .letter{gap:44px}
+  .letter-photo{max-width:none;margin-right:16px}
+  .converge{padding:28px 22px;gap:20px}
+  .table{margin-top:48px}
+  .upsell{margin-top:64px}
+  .co-why{order:-1}
+  .call{margin-top:56px}
+}
+@media (max-width:600px){
+  .pad{padding:80px 0}
+  h2{font-size:clamp(34px,9.6vw,44px);margin:18px 0 20px}
+  .head{margin-bottom:40px}
+  .lead{font-size:17px}
+  .hero{padding:120px 0 40px}
+  .hero h1{font-size:clamp(50px,14.5vw,64px)}
+  .hero .kicker{font-size:10.5px;letter-spacing:.22em;margin-bottom:18px}
+  .hero .thesis{font-size:17px;margin-top:22px}
+  .ladder{margin-top:36px}
+  .ladder div{padding-top:16px}
+  .ladder strong{font-size:24px}
+  .letter .big{font-size:32px}
+  .letter p{font-size:16.5px}
+  .tabs{display:flex;width:100%;margin-bottom:36px}
+  .tab{flex:1;padding:12px 10px;font-size:12px}
+  .story .who h3{font-size:32px;margin:14px 0 10px}
+  .beat{padding-bottom:26px}
+  .beat p{font-size:20px}
+  .converge h3{font-size:26px}
+  .err{padding:26px 22px}
+  .err .n{font-size:44px}
+  .quote-band blockquote{font-size:28px}
+  .pillar{padding:26px 22px}
+  .pillar h3{font-size:26px}
+  .pillar .why{font-size:17px}
+  .flow{row-gap:22px}
+  .flow .node{display:grid;grid-template-columns:52px 1fr;column-gap:16px;padding:0}
+  .flow .dot{width:52px;height:52px;font-size:20px;grid-row:span 2}
+  .flow h4{margin:4px 0 2px;font-size:20px}
+  .blk summary{gap:12px;padding:18px 16px}
+  .blk h4{font-size:20px}
+  .blk .bn{font-size:24px}
+  .blk .body{padding:0 16px 22px}
+  .script{font-size:18px;padding-left:16px}
+  .hook{padding:24px 22px}
+  .hook q{font-size:21px}
+  .co{padding:18px}
+  .bump{grid-template-columns:22px 1fr;gap:12px;padding:14px}
+  .bump .p{grid-column:2;font-size:17px}
+  .co-total b{font-size:28px}
+  .ctrl label{font-size:13.5px}
+  .kpi b{font-size:22px}
+  .kpi.hero-k{flex-direction:column;align-items:flex-start;gap:2px}
+  .kpi.hero-k b{font-size:44px}
+  .result .tagbig{font-size:88px}
+  .seq{grid-template-columns:1fr 1fr}
+  .phone{border-radius:24px;padding:10px}
+  .chat{min-height:0}
+  .ment .top h3{font-size:26px}
+  .obj summary{font-size:22px;padding:22px 0}
+  .ind{grid-template-columns:110px 1fr}
+  .ck{padding:16px}
+  .close{min-height:0}
+  .close-ph{max-width:280px}
+  .close .close-grid h2{font-size:clamp(34px,9.6vw,44px)}
+  footer .wrap{flex-direction:column;gap:8px}
+}
 </style>
 </head>
 <body>
@@ -600,7 +675,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="flow" id="flow">
       <svg viewBox="0 0 1000 4" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="2" x2="1000" y2="2" stroke="rgba(212,180,118,.18)" stroke-width="1"/><line id="flowLine" x1="0" y1="2" x2="1000" y2="2" stroke="#d4b476" stroke-width="1.5" stroke-dasharray="1000" stroke-dashoffset="1000"/></svg>
       <div class="node"><div class="dot">1</div><h4>Anúncio</h4><p>Meta Ads, campanha de compra, três ângulos.</p></div>
-      <div class="node"><div class="dot">2</div><h4>Página VSL</h4><p>Vídeo de 14–18 min; a oferta aparece no minuto do pitch.</p></div>
+      <div class="node"><div class="dot">2</div><h4>Página VSL</h4><p>VSL de 25 min; a oferta aparece no minuto do pitch.</p></div>
       <div class="node"><div class="dot">3</div><h4>Checkout</h4><p>R$ 297 e três order bumps.</p></div>
       <div class="node"><div class="dot">4</div><h4>Upsell</h4><p>Formação Completa em 1 clique.</p></div>
       <div class="node"><div class="dot">5</div><h4>Diagnóstico</h4><p>5 perguntas geram a etiqueta A, B ou C.</p></div>
@@ -608,7 +683,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
     <div class="table">
       <div class="row rv"><b>Anúncio</b><span>Campanha de vendas (compra) com três ângulos: autonomia profissional, gestão e rentabilidade, posicionamento premium.</span></div>
-      <div class="row rv"><b>Página VSL</b><span>Vídeo de 14–18 min; a oferta é liberada no segundo exato do pitch (<code>revealSeconds</code>).</span></div>
+      <div class="row rv"><b>Página VSL</b><span>VSL de 25 min; a oferta é liberada no segundo exato do pitch, aos 16:00 (<code>revealSeconds</code>).</span></div>
       <div class="row rv"><b>Checkout</b><span>Hotmart ou Kiwify. R$ 297 + bumps de R$ 67, R$ 97 e R$ 47. Campos obrigatórios: nome, e-mail, WhatsApp e CPF.</span></div>
       <div class="row rv"><b>Upsell</b><span>Formação Completa R$ 3.497 em 1 clique. A recusa leva à página de obrigado.</span></div>
       <div class="row rv"><b>Obrigado + diagnóstico</b><span>Formulário de 5 perguntas que gera a etiqueta de qualificação.</span></div>
@@ -622,32 +697,32 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="head">
       <div class="eyebrow rv">06 · Roteiro da VSL · R$ 297</div>
-      <h2 class="rv">17 minutos, <em>oito blocos</em></h2>
-      <p class="lead rv">Gravada pelo Pedro sentado, no consultório ou no escritório, com luz quente e tom de colega mais experiente. O pitch começa aos 11 minutos, e é nesse segundo que o botão aparece na página.</p>
+      <h2 class="rv">25 minutos, <em>oito blocos</em></h2>
+      <p class="lead rv">Gravada pelo Pedro sentado, no consultório ou no escritório, com luz quente e tom de colega mais experiente. Escolhi 25 minutos porque o médico decide devagar: o tempo extra vai para as duas histórias da narrativa, para um exemplo real em cada pilar e para as objeções. O pitch começa aos 16 minutos, e é nesse segundo que o botão aparece na página.</p>
     </div>
     <div class="rv">
       <div class="minutebar" id="minutebar">
-        <div style="flex:60" data-b="1"><span>Gancho</span></div>
-        <div style="flex:120" data-b="2"><span>Identificação</span></div>
-        <div style="flex:150" data-b="3"><span>Causa</span></div>
-        <div style="flex:90" data-b="4"><span>Autoridade</span></div>
-        <div style="flex:240" data-b="5"><span>Método</span></div>
-        <div style="flex:150" class="pitch" data-b="6"><span>Oferta</span></div>
-        <div style="flex:120" class="pitch" data-b="7"><span>Garantia</span></div>
-        <div style="flex:90" class="pitch" data-b="8"><span>Fecho</span></div>
-        <span class="mark">revealSeconds · 11:00</span>
+        <div style="flex:90" data-b="1"><span>Gancho</span></div>
+        <div style="flex:180" data-b="2"><span>Identificação</span></div>
+        <div style="flex:210" data-b="3"><span>Causa</span></div>
+        <div style="flex:120" data-b="4"><span>Autoridade</span></div>
+        <div style="flex:360" data-b="5"><span>Método</span></div>
+        <div style="flex:210" class="pitch" data-b="6"><span>Oferta</span></div>
+        <div style="flex:180" class="pitch" data-b="7"><span>Garantia</span></div>
+        <div style="flex:150" class="pitch" data-b="8"><span>Fecho</span></div>
+        <span class="mark">revealSeconds · 16:00</span>
       </div>
-      <div class="ticks"><span>0:00</span><span>5:00</span><span>10:00</span><span>17:00</span></div>
+      <div class="ticks"><span>0:00</span><span>12:30</span><span>25:00</span></div>
     </div>
     <div class="blocks">
-      <details class="blk rv" data-b="1" open><summary><span class="bn">01</span><h4>Gancho<small>Prender o médico certo</small></h4><span class="t">0:00–1:00</span><span class="pm"></span></summary><div class="body"><div class="script">“Se você é médico e pensa em abrir sua clínica, ou já tem uma e sente que ela só funciona quando você está dentro da sala, assista a este vídeo até o final. Nos próximos minutos eu vou te mostrar por que a maioria das clínicas não quebra por falta de paciente, e sim por falta de empresa. E como estruturar a sua para operar em alto padrão.”</div><p><b>Variante ângulo plantão:</b> “Você estudou mais de dez anos para cuidar de pessoas. Ninguém te ensinou a construir algo que funcione sem você dar plantão.”</p></div></details>
-      <details class="blk rv" data-b="2"><summary><span class="bn">02</span><h4>Identificação<small>Ele se reconhece no problema</small></h4><span class="t">1:00–3:00</span><span class="pm"></span></summary><div class="body"><div class="script">“Talvez você esteja em um destes três lugares. Primeiro: você quer abrir sua clínica, mas não sabe quanto investir, qual estrutura montar, nem se a conta fecha. Segundo: você vive de plantões e quer construir uma operação própria, com calma e planejamento. Terceiro: você já tem consultório ou clínica, atende bem, a agenda até enche, mas no fim do mês o dinheiro não aparece, a equipe depende de você pra tudo e o paciente que paga mais vai para o concorrente.”</div><p>Aqui entra uma história curta e real do Pedro: o momento em que percebeu que era um ótimo profissional, mas ainda não um empresário. É a ponte para as duas linhas de narrativa acima.</p></div></details>
-      <details class="blk rv" data-b="3"><summary><span class="bn">03</span><h4>Causa real<small>Consultório ≠ empresa</small></h4><span class="t">3:00–5:30</span><span class="pm"></span></summary><div class="body"><div class="script">“O problema não é você. A faculdade de medicina forma médicos, não donos de empresa. O consultório depende do seu tempo. A empresa depende de um modelo: público definido, preço sustentado por posicionamento, números acompanhados, processos que a equipe executa e uma forma previsível de atrair pacientes.”</div><p>Nomear os três erros: abrir pela estrutura física antes do modelo, precificar olhando o concorrente e depender só de indicação.</p></div></details>
-      <details class="blk rv" data-b="4"><summary><span class="bn">04</span><h4>Autoridade<small>Por que ouvir o Pedro</small></h4><span class="t">5:30–7:00</span><span class="pm"></span></summary><div class="body"><p>Trajetória em 60 a 90 segundos: formação, a clínica que ele estruturou e marcos verificáveis. Ele ainda atende todos os dias, e esse é o argumento mais forte: fala de dentro da operação. Apenas fatos comprováveis; números de faturamento só com contexto.</p></div></details>
-      <details class="blk rv" data-b="5"><summary><span class="bn">05</span><h4>Método<small>Os 6 pilares</small></h4><span class="t">7:00–11:00</span><span class="pm"></span></summary><div class="body"><div class="script">“Eu organizei tudo o que precisei aprender na prática em seis pilares, na ordem em que as decisões precisam ser tomadas.”</div><p>Uma frase de transformação por pilar, como na seção do método. Cerca de 40 segundos cada.</p></div></details>
-      <details class="blk rv" data-b="6"><summary><span class="bn">06</span><h4>Oferta<small>O que recebe e o preço</small></h4><span class="t">11:00–13:30</span><span class="pm"></span></summary><div class="body"><div class="script">“Por isso eu criei o programa Clínica de Alto Padrão. Você tem acesso imediato aos seis pilares, assiste no seu ritmo e termina com um plano de ação de 90 dias para a sua realidade. Uma consultoria de gestão para clínica custa milhares de reais. Um erro na abertura, um contrato de aluguel errado, uma equipe mal dimensionada, custa muito mais. O investimento no programa é de R$ 297, ou parcelado em até 12 vezes. Clique no botão abaixo deste vídeo.”</div></div></details>
-      <details class="blk rv" data-b="7"><summary><span class="bn">07</span><h4>Garantia e objeções<small>Remover o risco</small></h4><span class="t">13:30–15:30</span><span class="pm"></span></summary><div class="body"><div class="script">“Você tem 7 dias de garantia incondicional. Assista, aplique, e se não fizer sentido, peça o reembolso.”</div><p><b>“Não tenho tempo”</b> · aulas objetivas, no seu ritmo.<br><b>“Ainda não tenho clínica”</b> · é o melhor momento: antes de investir.<br><b>“Minha especialidade é diferente”</b> · gestão vale para qualquer especialidade.</p></div></details>
-      <details class="blk rv" data-b="8"><summary><span class="bn">08</span><h4>Fechamento<small>Chamada final</small></h4><span class="t">15:30–17:00</span><span class="pm"></span></summary><div class="body"><div class="script">“Você pode continuar atendendo bem, ou pode construir uma empresa. Clique no botão abaixo e comece hoje. Te vejo do lado de dentro.”</div></div></details>
+      <details class="blk rv" data-b="1" open><summary><span class="bn">01</span><h4>Gancho<small>Prender o médico certo</small></h4><span class="t">0:00–1:30</span><span class="pm"></span></summary><div class="body"><div class="script">“Se você é médico e pensa em abrir sua clínica, ou já tem uma e sente que ela só funciona quando você está dentro da sala, assista a este vídeo até o final. Nos próximos minutos eu vou te mostrar por que a maioria das clínicas não quebra por falta de paciente, e sim por falta de empresa. E como estruturar a sua para operar em alto padrão.”</div><p><b>Variante ângulo plantão:</b> “Você estudou mais de dez anos para cuidar de pessoas. Ninguém te ensinou a construir algo que funcione sem você dar plantão.”</p></div></details>
+      <details class="blk rv" data-b="2"><summary><span class="bn">02</span><h4>Identificação<small>Ele se reconhece no problema</small></h4><span class="t">1:30–4:30</span><span class="pm"></span></summary><div class="body"><div class="script">“Talvez você esteja em um destes três lugares. Primeiro: você quer abrir sua clínica, mas não sabe quanto investir, qual estrutura montar, nem se a conta fecha. Segundo: você vive de plantões e quer construir uma operação própria, com calma e planejamento. Terceiro: você já tem consultório ou clínica, atende bem, a agenda até enche, mas no fim do mês o dinheiro não aparece, a equipe depende de você pra tudo e o paciente que paga mais vai para o concorrente.”</div><p>Aqui entra uma história curta e real do Pedro: o momento em que percebeu que era um ótimo profissional, mas ainda não um empresário. Com os 25 minutos, cabem as duas histórias da narrativa acima, o médico da escala e o da agenda cheia, cerca de 40 segundos cada.</p></div></details>
+      <details class="blk rv" data-b="3"><summary><span class="bn">03</span><h4>Causa real<small>Consultório ≠ empresa</small></h4><span class="t">4:30–8:00</span><span class="pm"></span></summary><div class="body"><div class="script">“O problema não é você. A faculdade de medicina forma médicos, não donos de empresa. O consultório depende do seu tempo. A empresa depende de um modelo: público definido, preço sustentado por posicionamento, números acompanhados, processos que a equipe executa e uma forma previsível de atrair pacientes.”</div><p>Nomear os três erros: abrir pela estrutura física antes do modelo, precificar olhando o concorrente e depender só de indicação.</p></div></details>
+      <details class="blk rv" data-b="4"><summary><span class="bn">04</span><h4>Autoridade<small>Por que ouvir o Pedro</small></h4><span class="t">8:00–10:00</span><span class="pm"></span></summary><div class="body"><p>Trajetória em cerca de 2 minutos: formação, a clínica que ele estruturou e marcos verificáveis. Ele ainda atende todos os dias, e esse é o argumento mais forte: fala de dentro da operação. Apenas fatos comprováveis; números de faturamento só com contexto.</p></div></details>
+      <details class="blk rv" data-b="5"><summary><span class="bn">05</span><h4>Método<small>Os 6 pilares</small></h4><span class="t">10:00–16:00</span><span class="pm"></span></summary><div class="body"><div class="script">“Eu organizei tudo o que precisei aprender na prática em seis pilares, na ordem em que as decisões precisam ser tomadas.”</div><p>Uma frase de transformação por pilar, como na seção do método. Cerca de 1 minuto cada, sempre com um exemplo real da clínica dele: a decisão certa e o erro que ela evitou.</p></div></details>
+      <details class="blk rv" data-b="6"><summary><span class="bn">06</span><h4>Oferta<small>O que recebe e o preço</small></h4><span class="t">16:00–19:30</span><span class="pm"></span></summary><div class="body"><div class="script">“Por isso eu criei o programa Clínica de Alto Padrão. Você tem acesso imediato aos seis pilares, assiste no seu ritmo e termina com um plano de ação de 90 dias para a sua realidade. Uma consultoria de gestão para clínica custa milhares de reais. Um erro na abertura, um contrato de aluguel errado, uma equipe mal dimensionada, custa muito mais. O investimento no programa é de R$ 297, ou parcelado em até 12 vezes. Clique no botão abaixo deste vídeo.”</div></div></details>
+      <details class="blk rv" data-b="7"><summary><span class="bn">07</span><h4>Garantia e objeções<small>Remover o risco</small></h4><span class="t">19:30–22:30</span><span class="pm"></span></summary><div class="body"><div class="script">“Você tem 7 dias de garantia incondicional. Assista, aplique, e se não fizer sentido, peça o reembolso.”</div><p><b>“Não tenho tempo”</b> · aulas objetivas, no seu ritmo.<br><b>“Ainda não tenho clínica”</b> · é o melhor momento: antes de investir.<br><b>“Minha especialidade é diferente”</b> · gestão vale para qualquer especialidade.</p></div></details>
+      <details class="blk rv" data-b="8"><summary><span class="bn">08</span><h4>Fechamento<small>Chamada final</small></h4><span class="t">22:30–25:00</span><span class="pm"></span></summary><div class="body"><div class="script">“Você pode continuar atendendo bem, ou pode construir uma empresa. Clique no botão abaixo e comece hoje. Te vejo do lado de dentro.”</div></div></details>
     </div>
   </div>
 </section>
